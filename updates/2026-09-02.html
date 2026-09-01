@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TalesRunner — สรุปอัปเดตเดือนกันยายน ครั้งที่ 1 (2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f4f9;
+  --surface:#ffffff;
+  --surface-2:#faf9fd;
+  --line:#e6e3ef;
+  --ink:#1c1a26;
+  --ink-2:#4b4761;
+  --ink-3:#807c96;
+  --brand:#7c3aed;
+  --brand-2:#9365b8;
+  --brand-soft:#f3edff;
+  --pink:#ec4899;
+  --red:#e25041;
+  --red-soft:#fef2f1;
+  --green:#149e57;
+  --green-soft:#e9f9f0;
+  --blue:#2c82c9;
+  --blue-soft:#eaf3fb;
+  --amber:#d97706;
+  --amber-soft:#fff7e8;
+  --radius:16px;
+  --shadow:0 1px 2px rgba(28,26,38,.04), 0 8px 24px -12px rgba(28,26,38,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#131220;--surface:#1b1a2b;--surface-2:#201f33;--line:#2f2d45;
+    --ink:#f0eef8;--ink-2:#bfbad4;--ink-3:#8b86a4;
+    --brand:#a78bfa;--brand-2:#c4a3e8;--brand-soft:#282343;
+    --red:#ff8577;--red-soft:#2e1f21;
+    --green:#4ade80;--green-soft:#16281f;
+    --blue:#7dbbf0;--blue-soft:#182534;
+    --amber:#fbbf24;--amber-soft:#2b2317;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Kanit',-apple-system,'Segoe UI',sans-serif,
+    'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji';
+  font-weight:300;font-size:15.5px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(135deg,#5b21b6 0%,#7c3aed 38%,#9365b8 65%,#ec4899 100%);
+  padding:64px 0 74px;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(900px 380px at 88% -10%,rgba(255,255,255,.28),transparent 60%),
+             radial-gradient(600px 300px at 5% 110%,rgba(255,255,255,.16),transparent 60%);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1}
+.backrow{margin-bottom:20px}
+.backlink{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 15px 6px 12px;border-radius:999px;
+  background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.26);
+  color:#fff;text-decoration:none;font-size:13px;font-weight:300;
+  backdrop-filter:blur(6px);transition:.16s;
+}
+.backlink:hover{background:rgba(0,0,0,.3);border-color:rgba(255,255,255,.55)}
+.backlink svg{transition:transform .16s}
+.backlink:hover svg{transform:translateX(-3px)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);
+  padding:5px 14px;border-radius:999px;font-size:13px;font-weight:500;
+  backdrop-filter:blur(6px);
+}
+h1{
+  font-size:clamp(30px,5.2vw,50px);font-weight:600;line-height:1.22;
+  margin:18px 0 10px;letter-spacing:-.5px;
+}
+.hero .sub{font-size:clamp(15px,2vw,18px);font-weight:300;opacity:.94;max-width:660px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-meta span{
+  background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.22);
+  padding:7px 15px;border-radius:10px;font-size:13.5px;font-weight:400;
+}
+
+/* ---------- NAV ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--surface) 88%,transparent);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:11px;padding-bottom:11px;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{
+  flex:0 0 auto;text-decoration:none;color:var(--ink-2);font-size:13.5px;font-weight:400;
+  padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);
+  transition:.16s;white-space:nowrap;
+}
+nav a:hover{color:#fff;background:var(--brand);border-color:var(--brand)}
+
+/* ---------- SECTIONS ---------- */
+main{padding:44px 0 90px}
+section{margin-bottom:56px;scroll-margin-top:86px}
+.sec-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:22px}
+.sec-num{
+  flex:0 0 auto;width:44px;height:44px;border-radius:13px;
+  background:linear-gradient(140deg,var(--brand),var(--pink));color:#fff;
+  display:grid;place-items:center;font-weight:600;font-size:17px;
+  box-shadow:0 6px 18px -8px var(--brand);
+}
+.sec-head h2{margin:0;font-size:clamp(21px,3.2vw,27px);font-weight:600;line-height:1.35}
+.sec-head .ko{display:block;font-size:13px;font-weight:300;color:var(--ink-3);margin-top:2px}
+
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 26px;box-shadow:var(--shadow);margin-bottom:18px;
+}
+.card > :first-child{margin-top:0}
+.card > :last-child{margin-bottom:0}
+h3{
+  font-size:18.5px;font-weight:600;margin:0 0 6px;
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;line-height:1.45;
+}
+h3::before{content:"";width:5px;height:19px;border-radius:3px;background:var(--brand);flex:0 0 auto}
+h4{font-size:15.5px;font-weight:500;margin:22px 0 8px;color:var(--brand)}
+p{margin:0 0 10px}
+ul{margin:0 0 12px;padding-left:20px}
+li{margin-bottom:5px}
+li::marker{color:var(--brand-2)}
+strong{font-weight:500}
+a{color:var(--brand)}
+
+/* ---------- PILLS / BADGES ---------- */
+.pill{
+  display:inline-block;font-size:12px;font-weight:400;padding:3px 11px;border-radius:999px;
+  border:1px solid;line-height:1.7;white-space:nowrap;
+}
+.p-new{color:var(--green);background:var(--green-soft);border-color:color-mix(in srgb,var(--green) 32%,transparent)}
+.p-time{color:var(--blue);background:var(--blue-soft);border-color:color-mix(in srgb,var(--blue) 32%,transparent)}
+.p-cash{color:var(--amber);background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,transparent)}
+.p-brand{color:var(--brand);background:var(--brand-soft);border-color:color-mix(in srgb,var(--brand) 30%,transparent)}
+.p-end{color:var(--red);background:var(--red-soft);border-color:color-mix(in srgb,var(--red) 30%,transparent)}
+
+.period{
+  display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-2);
+  background:var(--surface-2);border:1px solid var(--line);border-radius:10px;
+  padding:6px 13px;margin:2px 0 14px;
+}
+.period b{font-weight:500;color:var(--ink)}
+
+/* ---------- CALLOUTS ---------- */
+.note,.dev,.tip{
+  border-radius:12px;padding:13px 16px;margin:14px 0;font-size:14px;line-height:1.7;
+  border:1px solid;
+}
+.note{color:var(--red);background:var(--red-soft);border-color:color-mix(in srgb,var(--red) 26%,transparent)}
+.note b{color:inherit}
+.dev{
+  background:var(--brand-soft);border-color:color-mix(in srgb,var(--brand) 26%,transparent);color:var(--ink-2);
+}
+.dev .dev-t{font-weight:500;color:var(--brand);display:block;margin-bottom:4px}
+.tip{background:var(--blue-soft);border-color:color-mix(in srgb,var(--blue) 26%,transparent);color:var(--ink-2)}
+
+/* ---------- TABLES ---------- */
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.8px;min-width:420px}
+thead th{
+  background:linear-gradient(180deg,var(--brand),color-mix(in srgb,var(--brand) 82%,#000));
+  color:#fff;font-weight:500;text-align:left;padding:10px 14px;white-space:nowrap;
+  position:sticky;top:0;
+}
+tbody td{padding:9px 14px;border-top:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even){background:var(--surface-2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.c,th.c{text-align:center}
+.t-sm table{font-size:13px}
+
+/* ---------- STAT LISTS ---------- */
+.st{margin:2px 0 0;padding-left:17px;list-style:disc}
+.st li{margin:0 0 3px;line-height:1.62}
+.st li:last-child{margin-bottom:0}
+.st li::marker{color:var(--brand-2);font-size:10px}
+td .st,figcaption .st{margin-top:3px}
+figcaption .st li{color:var(--ink-3)}
+
+/* ---------- GRIDS ---------- */
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+
+.hl{
+  background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);
+  border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);
+}
+.hl .t{font-weight:500;font-size:15px;margin-bottom:2px}
+.hl .d{font-size:13px;color:var(--ink-3);line-height:1.6}
+
+/* ---------- FIGURES ---------- */
+figure{margin:18px 0;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+figure img{display:block;width:100%;height:auto;background:#fff}
+figcaption{font-size:13px;color:var(--ink-3);padding:10px 14px;border-top:1px solid var(--line);line-height:1.6}
+figcaption b{color:var(--ink-2);font-weight:500}
+.fig-sm{max-width:520px}
+
+/* ---------- KV LIST ---------- */
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px;margin:10px 0}
+.kv dt{color:var(--ink-3);white-space:nowrap}
+.kv dd{margin:0;font-weight:400}
+
+footer{
+  border-top:1px solid var(--line);padding:30px 0 50px;
+  color:var(--ink-3);font-size:13px;text-align:center;
+}
+footer a{color:var(--brand-2)}
+@media(max-width:640px){
+  body{font-size:14.8px}
+  .card{padding:18px 16px}
+  .sec-num{width:38px;height:38px;font-size:15px;border-radius:11px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="backrow">
+      <a class="backlink" href="../index.html">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 10H5M9 5.5L4.5 10 9 14.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        กลับหน้ารวมอัปเดต
+      </a>
+    </div>
+    <span class="eyebrow">ตรวจสอบระบบตามรอบ &nbsp;·&nbsp; ประกาศวันที่ 2026-09-01</span>
+    <h1>สรุปอัปเดต<br>เดือนกันยายน ครั้งที่ 1</h1>
+    <p class="sub">แปลไทยฉบับเต็มจากประกาศทางการของ TalesRunner (테일즈런너) พร้อมข้อมูลจากรูปตารางรางวัลทั้งหมด</p>
+    <div class="hero-meta">
+      <span>📅 เริ่มใช้งาน: <b>2026.09.02 (พุธ) หลังปิดปรับปรุง</b></span>
+      <span>🎂 ครบรอบ 21 ปี</span>
+      <span>✨ Magical Prisma ครั้งที่ 5</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#highlight">ไฮไลต์</a>
+    <a href="#prisma">Magical Prisma 5</a>
+    <a href="#anniv">อีเวนต์ 21 ปี</a>
+    <a href="#cake">เค้ก 21st</a>
+    <a href="#bingo">สแตมป์บิงโก</a>
+    <a href="#safe">ตู้เซฟสฟิงซ์</a>
+    <a href="#lucky">สุ่มเลขนำโชค</a>
+    <a href="#lala">กล่องของขวัญลาล่า</a>
+    <a href="#exchange">ร้านแลก 21 ปี</a>
+    <a href="#market">ตลาดซื้อขาย</a>
+    <a href="#kchamp">K-Championship</a>
+    <a href="#wonderland">กล่อง Wonderland</a>
+    <a href="#birthday">วันเกิดตัวละคร</a>
+    <a href="#ending">สิ้นสุด/เปลี่ยนแปลง</a>
+    <a href="#reward">ของชดเชย</a>
+    <a href="#etc">อัปเดตอื่น ๆ</a>
+    <a href="#bugfix">แก้บั๊ก</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ================= HIGHLIGHT ================= -->
+<section id="highlight">
+  <div class="sec-head">
+    <div class="sec-num">★</div>
+    <div><h2>ไฮไลต์อัปเดตหลัก<span class="ko">9월 1차 주요 업데이트</span></h2></div>
+  </div>
+
+  <figure>
+    <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/2kmM4nROnk31kx2Iv3EwD9.png" alt="แบนเนอร์อัปเดต">
+    <figcaption>แบนเนอร์ประกาศอัปเดตอย่างเป็นทางการ</figcaption>
+  </figure>
+
+  <p>สวัสดีครับ นี่คือ <b>ปีเอโร่ (삐에로)</b> ผู้มอบความสุขและความสนุกแห่ง TalesRunner — ด้านล่างคือรายละเอียดอัปเดตของวันที่ <b>2 กันยายน 2026 (วันพุธ)</b></p>
+
+  <div class="grid g3" style="margin-top:18px">
+    <div class="hl"><div class="t">✨ Magical Prisma ครั้งที่ 5</div><div class="d">02 ก.ย. – 07 ต.ค.</div></div>
+    <div class="hl"><div class="t">🧭 แมปใหม่: การมาถึงของซีโครเนียม?! (★x5)</div><div class="d">ระดับความยาก 5 ดาว</div></div>
+    <div class="hl"><div class="t">🎂 อีเวนต์ครบรอบ 21 ปี</div><div class="d">02 ก.ย. – 07 ต.ค.</div></div>
+    <div class="hl"><div class="t">🍰 ทำเค้กฉลอง 21 ปี</div><div class="d">NPC อองรีที่ 3 ในสวนสาธารณะ</div></div>
+    <div class="hl"><div class="t">🎯 สแตมป์บิงโก 21 ปี</div><div class="d">NPC ลูซี่</div></div>
+    <div class="hl"><div class="t">🔐 ตู้เซฟทองคำของสฟิงซ์</div><div class="d">NPC สฟิงซ์</div></div>
+    <div class="hl"><div class="t">🎰 สุ่มเลขนำโชค</div><div class="d">วันละ 3 รอบ มีจัดอันดับ</div></div>
+    <div class="hl"><div class="t">🎁 กล่องของขวัญของลาล่า</div><div class="d">รับรางวัลตามเวลาที่ผ่านไป</div></div>
+    <div class="hl"><div class="t">🔄 ร้านแลกเปลี่ยน 21 ปี</div><div class="d">แลกไอเทมฉลองครบรอบ</div></div>
+    <div class="hl"><div class="t">💱 ตลาดซื้อขาย 21 ปี</div><div class="d">ซื้อ-ขายไอเทมเก่าระหว่างผู้เล่น</div></div>
+    <div class="hl"><div class="t">🏆 K-Championship 2026 รอบคัดออนไลน์</div><div class="d">02 – 16 ก.ย.</div></div>
+    <div class="hl"><div class="t">🎩 สินค้าใหม่: กล่อง Wonderland</div><div class="d">02 ก.ย. – 02 ธ.ค.</div></div>
+    <div class="hl"><div class="t">🎈 อีเวนต์วันเกิด</div><div class="d">อาเบล & มากิ</div></div>
+  </div>
+</section>
+
+<!-- ================= PRISMA ================= -->
+<section id="prisma">
+  <div class="sec-head">
+    <div class="sec-num">1</div>
+    <div><h2>Magical Prisma ครั้งที่ 5<span class="ko">매지컬 프리즈마 5차</span></h2></div>
+  </div>
+  <div class="period">📅 ช่วงเวลา: <b>2026.09.02 หลังปิดปรับปรุง → 2026.10.07 ก่อนปิดปรับปรุง</b></div>
+
+  <div class="card">
+    <h3>แมปใหม่ — การมาถึงของซีโครเนียม?! (★x5) <span class="pill p-new">ใหม่</span></h3>
+    <p class="ko" style="color:var(--ink-3);font-size:13px;margin-top:-2px">지크로니움의 등장?!(★x5)</p>
+    <ul>
+      <li>เพิ่มแมปใหม่ 1 แมปในช่อง <b>Magical Prisma</b></li>
+      <li><b>เงื่อนไขเข้าแมป:</b> พลังโจมตี (공격력) ตั้งแต่ <b>1,000 ขึ้นไป</b> <u>และ</u> พลังเวท (마법력) ตั้งแต่ <b>900 ขึ้นไป</b> — ต้องผ่านทั้งสองเงื่อนไข</li>
+      <li>เมื่อ HP บอสลดถึง <b>80% / 60% / 40% / 10%</b> จะได้รับ <b>[โพชั่นแปลงร่างพริซมา]</b> จุดละ 1 ชิ้น</li>
+      <li><b>ล้มบอสสำเร็จ:</b> รับ 280 แต้มแปลงร่าง · <b>ล้มไม่สำเร็จ:</b> รับ 40–60 แต้มแปลงร่าง</li>
+    </ul>
+
+    <h4>เควสต์รายวันของแมปใหม่</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>เนื้อหาเควสต์รายวัน</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td>เคลียร์ “การมาถึงของซีโครเนียม?!(★x5)” 1 ครั้ง</td><td>EXP +1,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">※ ทำสำเร็จได้<b>ไม่ว่าจะรอดชีวิตหรือไม่</b>ก็ตาม</div>
+
+    <div class="dev">
+      <span class="dev-t">★ คอมเมนต์จากทีมพัฒนา ★</span>
+      เนื่องจาก “การมาถึงของซีโครเนียม?!(★x5)” ถูกตั้งค่าความยากไว้สูง เราจึงตั้งใจให้เควสต์รายวันได้รับ<b>เฉพาะค่าประสบการณ์</b>เท่านั้น เพื่อลดความเหนื่อยล้าของผู้เล่น
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ปรับสมดุลช่อง Magical Prisma</h3>
+    <ul>
+      <li>เควสต์รายวันของ <b>“สู้เถอะ! กิกะซีโครเนียม (★x4)”</b> เปลี่ยนจำนวนครั้งที่ต้องเคลียร์จาก <b>2 ครั้ง → 1 ครั้ง</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>ทะลุขีดจำกัด! คอร์สฝึกเวทของปูรีมิง<span class="ko" style="font-weight:300;font-size:13px;color:var(--ink-3)">한계 돌파! 쁘리밍의 마법 특훈</span></h3>
+    <p>อัปเดตรางวัลแต้มระดับ <b>เข้มข้น 2 (심화2)</b> และเควสต์ <b>“ท้าทาย!”</b></p>
+
+    <div class="grid g2">
+      <div>
+        <h4>รางวัลแต้มระดับเข้มข้น 2</h4>
+        <div class="tw t-sm">
+          <table>
+            <thead><tr><th class="num">แต้ม</th><th>รางวัล</th></tr></thead>
+            <tbody>
+              <tr><td class="num">50</td><td>ทะลุขีดจำกัด! เมจิคอลพริซึม ×30</td></tr>
+              <tr><td class="num">100</td><td>แยมหัวใจพริซมิ่ง ×5</td></tr>
+              <tr><td class="num">150</td><td>ตั๋วกล่องระดับตำนาน ×15</td></tr>
+              <tr><td class="num">200</td><td>ของสนับสนุนจากยอนกูมิง ×1</td></tr>
+              <tr><td class="num">250</td><td>ทะลุขีดจำกัด! เมจิคอลพริซึม ×30</td></tr>
+              <tr><td class="num">300</td><td>หัวใจจริงใจ 1000% ×15</td></tr>
+              <tr><td class="num">350</td><td>ไม้เท้าโปรเฟสเซอร์ ×200</td></tr>
+              <tr><td class="num">400</td><td>ทะลุขีดจำกัด! เมจิคอลพริซึม ×50</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h4>เควสต์ “ท้าทาย!”</h4>
+        <div class="tw t-sm">
+          <table>
+            <thead><tr><th>ภารกิจ</th><th>รางวัล</th></tr></thead>
+            <tbody>
+              <tr><td>เคลียร์ “การมาถึงของซีโครเนียม?!(★x5)” 1 ครั้ง <b>(ต้องรอดชีวิต)</b></td><td>ฉายา <b>“พริซมาผู้ส่องสว่างความมืด”</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tip">หลังปิดปรับปรุง 2026.09.02 เมื่อทำ <b>เควสต์รายวัน</b> และ <b>เควสต์รายสัปดาห์</b> สำเร็จ จะได้รับแต้มระดับ <b>เข้มข้น 1</b> และ <b>เข้มข้น 2</b></div>
+        <div class="note">※ หากทำเควสต์รายวัน/รายสัปดาห์เสร็จ<b>หลังเวลา 00:00 ของวันปิดปรับปรุงแต่ก่อนเปิดเซิร์ฟ</b> จะไม่ได้รับแต้มระดับเข้มข้น โปรดระวัง</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>การเล่นแร่แปรธาตุของทีที<span class="ko" style="font-weight:300;font-size:13px;color:var(--ink-3)">티티의 매지컬 연금</span></h3>
+    <ul><li>เปลี่ยนขีดจำกัดการซื้อ <b>[หัวใจจริงใจ 1000%] 1 ชิ้น</b> ต่อคน เป็น <b>40 ครั้ง</b></li></ul>
+    <div class="note">※ จำนวนครั้งที่ซื้อไปแล้วก่อนปิดปรับปรุง 2026.09.02 จะยังคงถูกนับต่อ</div>
+  </div>
+
+  <div class="card">
+    <h3>ซีซันพาส — Prisma Pass ระดับ 71–80 <span class="pill p-new">เพิ่มระดับใหม่</span></h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="num">Lv.</th><th class="num">แต้มสะสมที่ต้องใช้</th><th>พาสพื้นฐาน (기본 패스)</th><th>พาสพลัส (플러스 패스)</th></tr></thead>
+        <tbody>
+          <tr><td class="num">71</td><td class="num">520,000</td><td>ถุงกุญแจล็อกเกอร์ II ×10</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="num">72</td><td class="num">540,000</td><td>กล่องปาร์ตี้ 21st ×2</td><td>ไม้เท้าโปรเฟสเซอร์ ×200</td></tr>
+          <tr><td class="num">73</td><td class="num">560,000</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="num">74</td><td class="num">580,000</td><td>กล่องปาร์ตี้ 21st ×2</td><td>หัวใจจริงใจ 1000% ×10</td></tr>
+          <tr><td class="num">75</td><td class="num">600,000</td><td>กล่องเทศกาล 21st ×1</td><td>ถุงคริสตัล 21st ×1</td></tr>
+          <tr><td class="num">76</td><td class="num">620,000</td><td>ถุงกุญแจล็อกเกอร์ II ×10</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="num">77</td><td class="num">640,000</td><td>กล่องปาร์ตี้ 21st ×3</td><td>ไม้เท้าโปรเฟสเซอร์ ×200</td></tr>
+          <tr><td class="num">78</td><td class="num">660,000</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="num">79</td><td class="num">680,000</td><td>กล่องปาร์ตี้ 21st ×3</td><td>หัวใจจริงใจ 1000% ×10</td></tr>
+          <tr><td class="num">80</td><td class="num">700,000</td><td>สิทธิ์เลือกคริสตัล 21st ×1</td><td>กระดาษคำอธิษฐาน 21st ×1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ซีซันคอลเลกชัน</h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>หมวดคอลเลกชัน</th><th>รายการที่ต้องสะสม</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>ภาคเสริม : การมาถึงของซีโครเนียม?! (★x5)</td>
+            <td>ซีโครเนียม (★x5) มือใหม่<br>ซีโครเนียม (★x5) มือกลาง<br>ซีโครเนียม (★x5) มือเก๋า</td>
+            <td>Prisma Special Compact ×1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ร้านค้าสวัสดิการ (매점) <span class="pill p-time">02 – 16 ก.ย.</span></h3>
+    <div class="period">📅 <b>2026.09.02 หลังปิดปรับปรุง → 2026.09.16 ก่อนปิดปรับปรุง</b> · อัตราสำเร็จทุกรายการ 100%</div>
+
+    <h4>💠 หมวด เหรียญพริซมา (프리즈마 코인)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ไอเทมที่ได้รับ</th><th class="num">ราคา</th><th class="c">รีเซ็ตรายวัน</th><th class="c">จำกัด/คน</th></tr></thead>
+        <tbody>
+          <tr><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td><td class="num">500</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>หัวใจจริงใจ 1000% ×1</td><td class="num">50</td><td class="c">✕</td><td class="c">30</td></tr>
+          <tr><td>แยมหัวใจพริซมิ่ง ×1</td><td class="num">500</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>กล่องแปลงร่างพริซมิ่ง ×10</td><td class="num">300</td><td class="c">✕</td><td class="c">ไม่จำกัด</td></tr>
+          <tr><td>กล่องแปลงร่างพริซมิ่ง ×1</td><td class="num">30</td><td class="c">✕</td><td class="c">ไม่จำกัด</td></tr>
+          <tr><td>อัญมณีหัวใจที่หลับใหล ×10</td><td class="num">20</td><td class="c">✕</td><td class="c">75</td></tr>
+          <tr><td>คูปองพริซมา 200% (1 ชม.) ×1</td><td class="num">15</td><td class="c">◯</td><td class="c">3</td></tr>
+          <tr><td>คูปองพริซมา 150% (1 ชม.) ×1</td><td class="num">10</td><td class="c">◯</td><td class="c">5</td></tr>
+          <tr><td>คันเบ็ด TR 1 ชั่วโมง</td><td class="num">1</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>ชิ้นส่วนตั๋วแลกวัตถุดิบพิเศษ ×1</td><td class="num">500</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>คูปองกระดานฝันร้าย III ×10</td><td class="num">60</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>คูปองรีเซ็ตกระดานฝันร้าย III ×3</td><td class="num">60</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>ไม้เท้าอัศวินดอกไม้ ×50</td><td class="num">49</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>ไม้เท้ามงกุฎสายรุ้ง ×50</td><td class="num">49</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>ไม้เท้าเทพสมุทรจุติ ×50</td><td class="num">49</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>ไม้เท้าซันไชน์ ×50</td><td class="num">49</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>ไม้เท้าแสงดาว ×50</td><td class="num">49</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>ไม้เท้าแห่งชัยชนะ ×50</td><td class="num">49</td><td class="c">✕</td><td class="c">2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>💠 หมวด แต้มการมีส่วนร่วม (기여포인트)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ไอเทมที่ได้รับ</th><th class="num">ราคา</th><th class="c">รีเซ็ตรายวัน</th><th class="c">จำกัด/คน</th></tr></thead>
+        <tbody>
+          <tr><td>กุญแจอีฟนิ่งเซราฟิม ×1</td><td class="num">50,000</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>เข็มทิศทองคำ ×1</td><td class="num">5,000</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>Magical Sign ×1</td><td class="num">5,000</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>หนอนบุ้ง (송충이) ×1</td><td class="num">1,000</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>Prism Star ×1</td><td class="num">1,000</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>Prism Star ×5</td><td class="num">500</td><td class="c">◯</td><td class="c">1</td></tr>
+          <tr><td>วาจาเสียดแทงวิญญาณ ×2</td><td class="num">1,000</td><td class="c">◯</td><td class="c">1</td></tr>
+          <tr><td>Pure Therapy ×5</td><td class="num">750</td><td class="c">◯</td><td class="c">1</td></tr>
+          <tr><td>กล่องพริซมา ×1</td><td class="num">1,000</td><td class="c">◯</td><td class="c">3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>💠 หมวด Zizimon Token (지지몬 토큰)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ไอเทมที่ได้รับ</th><th class="num">ราคา</th><th class="c">รีเซ็ตรายวัน</th><th class="c">จำกัด/คน</th></tr></thead>
+        <tbody>
+          <tr><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td><td class="num">2,500</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>Prisma Special Compact ×1</td><td class="num">500</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>อัญมณีหัวใจที่ถูกเลือก ×5</td><td class="num">50</td><td class="c">✕</td><td class="c">100</td></tr>
+          <tr><td>อัญมณีหัวใจที่หลับใหล ×5</td><td class="num">50</td><td class="c">✕</td><td class="c">50</td></tr>
+          <tr><td>Lite.1 สิทธิ์เปลี่ยนระดับ Legendary ×1</td><td class="num">2,000</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>Lite.1 สิทธิ์เปลี่ยนระดับ Unique ×1</td><td class="num">390</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>Lite.1 สิทธิ์เปลี่ยนระดับ Rare ×1</td><td class="num">160</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>กล่องพริซมา ×1</td><td class="num">50</td><td class="c">◯</td><td class="c">5</td></tr>
+          <tr><td>กุญแจพริซมา ×1</td><td class="num">50</td><td class="c">◯</td><td class="c">5</td></tr>
+          <tr><td>เหรียญพริซมา ×10</td><td class="num">50</td><td class="c">◯</td><td class="c">5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">※ ระหว่างช่วงอีเวนต์ Magical Prisma <b>แต้มการมีส่วนร่วมจะไม่ถูกรีเซ็ต</b></div>
+  </div>
+
+  <div class="card">
+    <h3>ตลับแป้งแปลงร่าง (변신 콤팩트)</h3>
+    <ul>
+      <li><b>รีเซ็ตแต้มสะสม</b> พร้อมอัปเดตรางวัลใหม่</li>
+      <li>หลังปิดปรับปรุง 2026.09.02 แจก <b>[Prisma Prism Compact] ×2</b></li>
+    </ul>
+    <div class="note">※ ผู้ที่เข้าร่วมช่องใหม่หลังปิดปรับปรุง 2026.09.02 จะได้รับ <b>[Prisma Prism Compact] ×10</b></div>
+
+    <h4>รางวัลแต้มสะสม</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="num">แต้มสะสม</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1,000</td><td>กล่องพริซมา ×3</td></tr>
+          <tr><td class="num">2,000</td><td>ถุงกุญแจล็อกเกอร์ II ×20</td></tr>
+          <tr><td class="num">3,000</td><td>กล่องแปลงร่างพริซมิ่ง ×2</td></tr>
+          <tr><td class="num">4,000</td><td>ถุงกุญแจล็อกเกอร์ II ×30</td></tr>
+          <tr><td class="num">5,000</td><td>กล่องพริซมา ×5</td></tr>
+          <tr><td class="num">7,000</td><td>ถุงกุญแจเปล่งประกาย II ×10</td></tr>
+          <tr><td class="num">10,000</td><td>กล่องแปลงร่างพริซมิ่ง ×3</td></tr>
+          <tr><td class="num">15,000</td><td>ถุงกุญแจหรูหรา II ×5</td></tr>
+          <tr><td class="num">20,000</td><td>กล่องพริซมา ×10</td></tr>
+          <tr><td class="num">25,000</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="num">30,000</td><td>แยมหัวใจพริซมิ่ง ×1</td></tr>
+          <tr><td class="num">40,000</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="num">50,000</td><td>กุญแจอีฟนิ่งเซราฟิม ×1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ตู้ล็อกเกอร์ตื่นเต้น♥ (두근두근♥ 사물함)</h3>
+    <ul>
+      <li><b>รีเซ็ตตู้ล็อกเกอร์ทั้งหมด</b> — รางวัลที่ยังไม่ได้รับจะถูกส่งเข้ากล่องของขวัญ</li>
+      <li>อัปเดต <b>กุญแจตู้ล็อกเกอร์ II</b> (สิ่งใหม่)</li>
+    </ul>
+
+    <div class="grid g2">
+      <div>
+        <h4>แหล่งได้รับกุญแจล็อกเกอร์ II</h4>
+        <ul>
+          <li>ดรอปจากแมปในช่อง Magical Prisma</li>
+          <li>รางวัลแต้มสะสมตลับแป้งแปลงร่าง</li>
+          <li>ซีซันพาส</li>
+          <li>อีเวนต์ครบรอบ 21 ปี</li>
+        </ul>
+      </div>
+      <div>
+        <h4>ไอเทมที่จะถูกเรียกคืน</h4>
+        <ul>
+          <li>ถุงกุญแจล็อกเกอร์ / ถุงกุญแจเปล่งประกาย / หรูหรา / ระดับตำนาน (แบบเก่า)</li>
+          <li>กุญแจตู้ล็อกเกอร์ตื่นเต้น หมายเลข 1–16 (แบบเก่า)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>องค์ประกอบของถุงกุญแจแต่ละแบบ</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ถุงกุญแจ</th><th>สุ่มได้กุญแจหมายเลข</th></tr></thead>
+        <tbody>
+          <tr><td>ถุงกุญแจล็อกเกอร์ II</td><td>หมายเลข 1 – 16 (ทั้งหมด)</td></tr>
+          <tr><td>ถุงกุญแจเปล่งประกาย II</td><td>หมายเลข 5, 6, 7, 8</td></tr>
+          <tr><td>ถุงกุญแจหรูหรา II</td><td>หมายเลข 9, 10, 11, 12</td></tr>
+          <tr><td>ถุงกุญแจระดับตำนาน II</td><td>หมายเลข 13, 14, 15, 16</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">※ หลังปิดปรับปรุง 2026.09.02 เนื่องจากถุงกุญแจแบบเก่าถูกเรียกคืน ของในถุง <b>[ถุงหัวใจอ่อนแรง]</b> ที่เดิมเป็น <b>[ถุงกุญแจระดับตำนาน]</b> จะเปลี่ยนเป็น <b>[เหรียญพริซมา] ×300</b></div>
+
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/issue/3kNQHAzE6TWGWtgYG8cWNQ.png" alt="รายการรางวัลตู้ล็อกเกอร์ 1-16" loading="lazy">
+      <figcaption><b>รายการรางวัลตู้ล็อกเกอร์ทั้ง 16 ตู้ (ตารางต้นฉบับ)</b> — ตู้หมายเลขสูงขึ้นจะมีของระดับดีขึ้น เช่น ตู้ 1–3 เน้นคูปองพริซมา 150% / ตู้ 5–8 เป็นคูปอง 200% + Master Coin / ตู้ 9–12 มี Lite.1 สิทธิ์เปลี่ยนระดับและกล่องคอสตูม / ตู้ 13–16 มี Prestige Box, Mythology, เหรียญที่ระลึก 21st จำนวนมาก</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h3>ความสำเร็จอีเวนต์ (이벤트 업적) <span class="pill p-new">ใหม่</span></h3>
+    <p>เพิ่มภารกิจความสำเร็จที่เกี่ยวกับอีเวนต์ Magical Prisma</p>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ภารกิจ</th><th class="c">ขั้น</th><th class="c">จำนวนครั้ง</th><th>รางวัล 1</th><th>รางวัล 2</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="5">เคลียร์ “การมาถึงของซีโครเนียม?!(★x5)”</td><td class="c">1</td><td class="c">1</td><td>เหรียญพริซมา ×30</td><td>ฉายา <b>ซีโครเนียม (★x5) มือใหม่</b></td></tr>
+          <tr><td class="c">2</td><td class="c">1</td><td>เหรียญพริซมา ×30</td><td>กุญแจพริซมา ×3</td></tr>
+          <tr><td class="c">3</td><td class="c">1</td><td>เหรียญพริซมา ×30</td><td>ฉายา <b>ซีโครเนียม (★x5) มือกลาง</b></td></tr>
+          <tr><td class="c">4</td><td class="c">1</td><td>เหรียญพริซมา ×50</td><td>Prisma Special Compact ×1</td></tr>
+          <tr><td class="c">5</td><td class="c">1</td><td>เหรียญพริซมา ×50</td><td>ฉายา <b>ซีโครเนียม (★x5) มือเก๋า</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">※ ภารกิจเคลียร์ “การมาถึงของซีโครเนียม?!(★x5)” นับผลสำเร็จ<b>ไม่ว่าจะรอดชีวิตหรือไม่</b></div>
+  </div>
+</section>
+
+<!-- ================= ANNIVERSARY ================= -->
+<section id="anniv">
+  <div class="sec-head">
+    <div class="sec-num">2</div>
+    <div><h2>อีเวนต์ครบรอบ 21 ปี TalesRunner<span class="ko">테일즈런너 21주년 이벤트</span></h2></div>
+  </div>
+  <div class="period">📅 ช่วงเวลา: <b>2026.09.02 หลังปิดปรับปรุง → 2026.10.07 ก่อนปิดปรับปรุง</b></div>
+
+  <div class="card">
+    <h3>เควสต์ใหม่ครบรอบ 21 ปี</h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>สถานที่</th><th>NPC</th><th>ชื่อเควสต์</th><th>รางวัลเควสต์</th><th>รางวัลร่วม</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="4">สวนสาธารณะ<br>(공원)</td><td>อองรีที่ 3</td><td>ครบรอบ 21 ปีไปด้วยกัน</td><td>กล่องของขวัญขอบคุณ 21st ×1<br>+ ฉายา <b>“ร่วมฉลอง 21 ปี”</b></td><td rowspan="4">TR/EXP +1,000</td></tr>
+          <tr><td>ลาล่า</td><td>ส่งใจขอบคุณ</td><td>—</td></tr>
+          <tr><td>ลูซี่</td><td>ขอให้เป็นเทศกาลที่สนุกสนาน</td><td>—</td></tr>
+          <tr><td>สฟิงซ์</td><td>ตู้เซฟทองคำของสฟิงซ์</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>ของในกล่องของขวัญขอบคุณ 21st</h4>
+    <div class="tw t-sm fig-sm">
+      <table>
+        <thead><tr><th>ไอเทม</th></tr></thead>
+        <tbody>
+          <tr><td>เหรียญที่ระลึก 21st ×50</td></tr>
+          <tr><td>กุญแจอีฟนิ่งเซราฟิม ×1</td></tr>
+          <tr><td>หนังสือเวทเซราฟิมที่ถูกผนึก ×1</td></tr>
+          <tr><td>เหรียญพริซมา ×100</td></tr>
+          <tr><td>กล่องปาร์ตี้ 21st ×5</td></tr>
+          <tr><td>ไม้เท้าโปรเฟสเซอร์ ×100</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>เช็คอินครบรอบ 21 ปี <span class="pill p-time">ถึง 2026.10.07 เวลา 00:00</span></h3>
+    <p>เพิ่มกระดานเช็คอินครบรอบ 21 ปี รวม 21 วัน</p>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="num">วันที่</th><th>รางวัล</th><th class="num">วันที่</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>กระดาษคำอธิษฐาน 21st ×1</td><td class="num">12</td><td>ถุงคริสตัล 21st ×1</td></tr>
+          <tr><td class="num">2</td><td>เหรียญที่ระลึก 21st ×1,000</td><td class="num">13</td><td>เหรียญที่ระลึก 21st ×2,000</td></tr>
+          <tr><td class="num">3</td><td>สิทธิ์เลือกไม้เท้าระดับกลาง ×3</td><td class="num">14</td><td>เหรียญพริซมา ×500</td></tr>
+          <tr><td class="num">4</td><td>ถุงเหรียญ Select Shop ×3</td><td class="num">15</td><td>กล่องปาร์ตี้ 21st ×10</td></tr>
+          <tr><td class="num">5</td><td>เหรียญพริซมา ×300</td><td class="num">16</td><td>หัวใจจริงใจ 1000% ×10</td></tr>
+          <tr><td class="num">6</td><td>Prestige Box อเนกประสงค์ ×1</td><td class="num">17</td><td>เหรียญพริซมา ×500</td></tr>
+          <tr><td class="num">7</td><td>หัวใจจริงใจ 1000% ×10</td><td class="num">18</td><td>สิทธิ์เลือกคริสตัล 21st ×3</td></tr>
+          <tr><td class="num">8</td><td>กุญแจพริซมา ×3</td><td class="num">19</td><td>ไม้เท้าโปรเฟสเซอร์ ×300</td></tr>
+          <tr><td class="num">9</td><td>ไม้เท้าโปรเฟสเซอร์ ×200</td><td class="num">20</td><td>ชิ้นส่วนประกายเงิน ×30</td></tr>
+          <tr><td class="num">10</td><td>ถุงเหรียญ Select Shop ×3</td><td class="num">21</td><td>กระดาษคำอธิษฐาน 21st ×1</td></tr>
+          <tr><td class="num">11</td><td>เหรียญพริซมา ×300</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>👑 มงกุฎลอเรลสีเงิน (실버 월계관) — ไอเทมเป้าหมายหลัก</h3>
+    <p>รับไอเทมอีเวนต์ 21 ปีเพื่อนำไปประกอบเป็น <b>[มงกุฎลอเรลสีเงิน]</b> และไอเทมที่ระลึกครบรอบ 21 ปี</p>
+
+    <div class="tip">
+      <b>วัตถุดิบที่ต้องใช้ทั้งหมด:</b> ถุงวัตถุดิบ ×1 · สิทธิ์เลือกวัตถุดิบ ×5 · ชิ้นส่วน ×200
+    </div>
+
+    <h4>แหล่งได้รับ (ออกแบบให้ได้ครบแน่นอน ไม่ต้องพึ่งดวง)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>แหล่งที่มา</th><th>ได้รับ</th></tr></thead>
+        <tbody>
+          <tr><td>กล่องจดหมายปีเอโร่</td><td>ถุงวัตถุดิบ ×1</td></tr>
+          <tr><td>ร้านแลกเปลี่ยน 21 ปี</td><td><ul class="st"><li>สิทธิ์เลือก ×3</li><li>ชิ้นส่วน ×50</li></ul></td></tr>
+          <tr><td>รางวัลความคืบหน้าเค้ก</td><td><ul class="st"><li>สิทธิ์เลือก ×1</li><li>ชิ้นส่วน ×30</li></ul></td></tr>
+          <tr><td>เช็คอินครบรอบ 21 ปี</td><td>ชิ้นส่วน ×30</td></tr>
+          <tr><td>รางวัลสะสมสแตมป์บิงโก</td><td><ul class="st"><li>สิทธิ์เลือก ×1</li><li>ชิ้นส่วน ×30</li></ul></td></tr>
+          <tr><td>รางวัลสะสมสุ่มเลขนำโชค</td><td>ชิ้นส่วน ×30</td></tr>
+          <tr><td>ร้านแลก Master Coin</td><td><ul class="st"><li>ชิ้นส่วน ×30 (ก.ย. ครั้งที่ 1 = 15</li><li>ครั้งที่ 2 = 15)</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>สูตรประกอบ (ร้านแลกเปลี่ยนคลิกขวา)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>สิ่งที่ได้</th><th>วัตถุดิบ</th></tr></thead>
+        <tbody>
+          <tr><td><b>มงกุฎลอเรลสีเงิน (ถาวร)</b></td><td>อัญมณีสีแดงเรือง ×1 + ห่วงเงิน ×1 + ขนนกเงิน ×1 + ช่อลอเรลเงิน ×1 + ดาวเงิน ×1 + ออร่าเงิน ×1 + ชิ้นส่วนประกายเงิน ×200</td></tr>
+          <tr><td>สิทธิ์เลือกประกายเงิน ×1</td><td>วัตถุดิบอย่างใดอย่างหนึ่ง ×3</td></tr>
+          <tr><td>วัตถุดิบอย่างใดอย่างหนึ่ง ×1</td><td>สิทธิ์เลือกประกายเงิน ×1</td></tr>
+          <tr><td>ถุงประกายเงิน ×1</td><td>ชิ้นส่วนประกายเงิน ×200</td></tr>
+          <tr><td>EXP +3,000,000</td><td>วัตถุดิบอย่างใดอย่างหนึ่ง ×1 (แปลงเป็น EXP)</td></tr>
+          <tr><td>EXP +15,000</td><td>ชิ้นส่วนประกายเงิน ×1</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="dev">
+      <span class="dev-t">★ คอมเมนต์จากทีมพัฒนา ★</span>
+      [มงกุฎลอเรลสีเงิน] ถูกออกแบบให้ได้รับ<b>แน่นอน</b>ผ่านรางวัลของคอนเทนต์ต่าง ๆ ในอีเวนต์ 21 ปี ทุกเส้นทางถูกลดปัจจัยด้านดวงให้เหลือน้อยที่สุด<br>
+      ผู้เล่นที่พลาดรางวัลบางส่วนหรือเข้าร่วมช้า ยังสามารถหาวัตถุดิบบางส่วนได้จากร้านค้าและช่องทางอื่น (ดรอปจากแมป, ตลาดประมูล ฯลฯ)
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ไอเทมฉลองครบรอบ 21 ปี + ค่าสเตตัส</h3>
+
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/0hTyywIpxMpL9oD50HOM5R.png" alt="เซ็ต Fairytale Kingdom" loading="lazy">
+      <figcaption><b>เซ็ต Fairytale Kingdom (페어리테일 킹덤 세트)</b> — ระดับ Legendary</figcaption>
+    </figure>
+
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ชิ้น</th><th>ตำแหน่ง</th><th>ค่าสเตตัส (Avatar OFF)</th></tr></thead>
+        <tbody>
+          <tr><td><b>Fairytale Kingdom Crown</b></td><td>หัว</td><td><ul class="st"><li>สเตตัสทุกอย่าง +1</li><li>โบนัส EXP 40%</li><li>โบนัส TR 40%</li><li>EXP ไม่ว่าแพ้ชนะ +21</li><li>TR ไม่ว่าแพ้ชนะ +21</li><li>ต้านการเหยียบ 21%</li><li><span style="color:var(--red)">ความเร็วสะสมโกรธ 10%</span></li><li><span style="color:var(--red)">ระยะเวลาโกรธ 10%</span></li><li>เกจแดชสูงสุด +5%</li><li>EXP สูงสุดต่อรอบ 600</li></ul></td></tr>
+          <tr><td><b>Fairytale Kingdom Cape</b></td><td>หลัง</td><td><ul class="st"><li>ค่าสูงสุดความเร็ว +1</li><li>ความเร็วสูงสุด +2</li><li>โบนัส EXP 100%</li><li>โบนัส TR 100%</li><li>โอกาสหลบ 1 ครั้งเมื่อชนสิ่งกีดขวาง 21%</li><li>ต้านไฟฟ้า 30%</li><li>หลบการโจมตีโกรธ 25%</li><li><span style="color:var(--red)">ความเร็วสะสมโกรธ 15%</span></li><li><span style="color:var(--red)">ระยะเวลาโกรธ 15%</span></li><li>เกจแดชสูงสุด +15%</li><li>EXP สูงสุดต่อรอบ 1000</li></ul></td></tr>
+          <tr><td><b>Fairytale Kingdom Portal</b></td><td>Special</td><td><ul class="st"><li>คอนโทรล +1</li><li>โบนัส EXP 21%</li><li>โบนัส TR 21%</li><li>EXP ไม่ว่าแพ้ชนะ +21</li><li>TR ไม่ว่าแพ้ชนะ +21</li><li><span style="color:var(--red)">ความเร็วสะสมโกรธ 5%</span></li><li>EXP สูงสุดต่อรอบ 500</li></ul></td></tr>
+          <tr style="background:var(--green-soft)"><td colspan="2"><b>โบนัสเซ็ต (หัว + หลัง + Special)</b></td><td><ul class="st"><li>ความเร็วสูงสุด +1</li><li>โบนัส EXP <b>90%</b></li><li>โบนัส TR <b>90%</b></li><li>EXP สูงสุดต่อรอบ 700</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/1DQAQxvbBY656ifm6j9LAl.png" alt="เซ็ตปาร์ตี้ 21st" loading="lazy">
+      <figcaption><b>เซ็ตปาร์ตี้ 21st (21st 파티 세트)</b> — ระดับ Unique</figcaption>
+    </figure>
+
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ชิ้น</th><th>ตำแหน่ง</th><th>ค่าสเตตัส (Avatar OFF)</th></tr></thead>
+        <tbody>
+          <tr><td>21st Party Ribbon</td><td>หัว</td><td><ul class="st"><li>อัตราเร่ง +2</li><li>พลัง +1</li><li>โบนัส EXP 30%</li><li>โบนัส TR 30%</li><li>โอกาสออกฤทธิ์เมื่อแดชลงพื้น 100%</li><li>TR เมื่อออกฤทธิ์ +21</li><li>ความเร็วสะสมโกรธ 10%</li><li>ระยะเวลาโกรธ 10%</li><li>EXP สูงสุดต่อรอบ 300</li></ul></td></tr>
+          <tr><td>21st Party Napkin</td><td>หน้า</td><td><ul class="st"><li>อัตราเร่ง +1</li><li>โบนัส EXP 50%</li><li>โบนัส TR 50%</li><li>ลดเวลาสถานะกลิ้ง 21%</li><li>ความเร็วสะสมโกรธ 10%</li><li>ระยะเวลาโกรธ 10%</li><li>เกจแดชสูงสุด +5%</li><li>EXP สูงสุดต่อรอบ 300</li></ul></td></tr>
+          <tr><td>21st Party Icing Piero</td><td>คอ</td><td><ul class="st"><li>คอนโทรล +1</li><li>โบนัส EXP 35%</li><li>โบนัส TR 35%</li><li>พลังชีวิต +21</li><li>ความเร็วสะสมโกรธ 15%</li><li>ระยะเวลาโกรธ 15%</li><li>เกจแดชสูงสุด +5%</li><li>EXP สูงสุดต่อรอบ 300</li></ul></td></tr>
+          <tr><td>21st Party Baking Glove</td><td>มือ</td><td><ul class="st"><li>คอนโทรล +1</li><li>โบนัส EXP 35%</li><li>โบนัส TR 35%</li><li>ความเร็วสะสมโกรธ 15%</li><li>ระยะเวลาโกรธ 21%</li><li>เกจแดชสูงสุด +5%</li><li>EXP สูงสุดต่อรอบ 500</li></ul></td></tr>
+          <tr><td>21st Party Whipping Stick</td><td>หลัง</td><td><ul class="st"><li>ความเร็วสูงสุด +1</li><li>โบนัส EXP 60%</li><li>โบนัส TR 60%</li><li>ต้านไฟฟ้า 21%</li><li>หลบการโจมตีโกรธ 21%</li><li>ความเร็วสะสมโกรธ 15%</li><li>ระยะเวลาโกรธ 15%</li><li>เกจแดชสูงสุด +10%</li><li>EXP สูงสุดต่อรอบ 500</li></ul></td></tr>
+          <tr><td>21st Party Cake</td><td>Special</td><td><ul class="st"><li>พลัง +1</li><li>โบนัส EXP 15%</li><li>โบนัส TR 15%</li><li>ลดเวลาลุกเมื่อชนสิ่งกีดขวาง 2%</li><li>เกจแดชสูงสุด +1%</li><li>EXP สูงสุดต่อรอบ 300</li></ul></td></tr>
+          <tr style="background:var(--green-soft)"><td colspan="2"><b>โบนัสเซ็ตครบ 6 ชิ้น</b></td><td><ul class="st"><li>อัตราเร่ง +1</li><li>โบนัส EXP <b>120%</b></li><li>โบนัส TR <b>120%</b></li><li>EXP สูงสุดต่อรอบ 900</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/6DJSR5r5596GDGO02Q0CAY.jpg" alt="กรอบรูปที่ระลึก 21st" loading="lazy">
+      <figcaption><b>กรอบรูปที่ระลึก 21st (21st 기념 액자)</b><ul class="st"><li>แลกด้วย “เฟรมที่ระลึก 21st” ×21</li><li>เฟรม 1 อัน = เหรียญที่ระลึก 21st ×21</li></ul></figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h3>สินค้าในร้านค้าฉลอง 21 ปี <span class="pill p-cash">Cash</span></h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>สินค้า</th><th class="num">ราคา (Cash)</th><th class="c">ส่งเป็นของขวัญ</th><th class="c">จำกัดการซื้อ</th></tr></thead>
+        <tbody>
+          <tr><td>สิทธิ์เลือกประกายเงิน ×1</td><td class="num">24,900</td><td class="c" style="color:var(--red)">ไม่ได้</td><td class="c">1 ครั้ง/บัญชี</td></tr>
+          <tr><td>ถุงคริสตัล 21st ×1</td><td class="num">4,500</td><td class="c" style="color:var(--red)">ไม่ได้</td><td class="c">3 ครั้ง/เดือน</td></tr>
+          <tr><td>กล่องปาร์ตี้ 21st ×10</td><td class="num">2,100</td><td class="c" style="color:var(--red)">ไม่ได้</td><td class="c">3 ครั้ง/เดือน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="period">📅 ขาย <b>2026.09.02 หลังปิดปรับปรุง → 2026.10.07 ก่อนปิดปรับปรุง</b></div>
+  </div>
+
+  <div class="card">
+    <h3>แบนเนอร์อีเวนต์ 21 ปี</h3>
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/2kGECliSYyekMK1GyBjQ2e.jpg" alt="แบนเนอร์อีเวนต์ 21 ปี" loading="lazy">
+      <figcaption>เข้าใช้งานผ่านปุ่ม <b>“อีเวนต์ 21 ปี”</b> มุมขวาบนของห้องรอ</figcaption>
+    </figure>
+    <ul>
+      <li>ปุ่ม <b>“ไปยัง Event Zone”</b> จะพาไปยัง Event Zone ในสวนสาธารณะ</li>
+      <li>ปุ่มของแต่ละอีเวนต์ในแบนเนอร์ใช้ดูคู่มือหรือเข้าร่วมอีเวนต์ได้ทันที</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CAKE ================= -->
+<section id="cake">
+  <div class="sec-head">
+    <div class="sec-num">3</div>
+    <div><h2>ทำเค้กฉลองครบรอบ 21 ปี<span class="ko">21주년 기념 케이크 만들기</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>ใช้งานผ่าน NPC <b>อองรีที่ 3 (앙리 3세)</b> ในสวนสาธารณะ</p>
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/3yCetyu7BqFFWpfb9j9xsf.jpg" alt="หน้าจอทำเค้ก 21 ปี" loading="lazy">
+      <figcaption>ส่งมอบ <b>[ชิ้นเค้ก 21st]</b> เพื่อเพิ่มความคืบหน้าของเค้ก และรับรางวัลการส่งมอบ</figcaption>
+    </figure>
+
+    <div class="grid g2">
+      <div>
+        <h4>แหล่งได้รับ [ชิ้นเค้ก 21st]</h4>
+        <ul>
+          <li>ดรอปจากแมปช่อง Magical Prisma</li>
+          <li>กล่องเทศกาล 21st (จากภารกิจ Tales Book)</li>
+        </ul>
+        <div class="note">※ ช่องทางการได้รับชิ้นเค้ก 21st อาจเปลี่ยนแปลงตามอัปเดต</div>
+      </div>
+      <div>
+        <h4>รางวัลการส่งมอบวัตถุดิบ</h4>
+        <ul>
+          <li>โพชั่นตลาด 21 ปี (เล็ก) ×1</li>
+          <li>โพชั่นตลาด 21 ปี (เล็ก) ×2</li>
+        </ul>
+        <h4>แลกเปลี่ยน (คลิกขวา)</h4>
+        <p>ชิ้นเค้ก 21st ×1 → <b>EXP +500</b></p>
+      </div>
+    </div>
+
+    <ul>
+      <li>เมื่อความคืบหน้าถึงระดับที่กำหนด เค้กจะเปลี่ยนรูปร่างไปสู่ขั้นถัดไป</li>
+      <li>รับรางวัลตาม <b>จำนวนที่ส่งสะสม (ส่วนบุคคล)</b> และ <b>ความคืบหน้าของเค้ก (รวมทั้งเซิร์ฟ)</b></li>
+    </ul>
+
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/4wPgbkQGvuUf7XXHZQFoEZ.jpg" alt="เค้กฉลอง 21st" loading="lazy">
+      <figcaption><b>เค้กฉลองที่ระลึก 21st (21st 기념 축하 케이크)</b> — ไอเทมที่ได้จากการประกอบครบ</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h3>รางวัลตามความคืบหน้าเค้ก (30 ขั้น)</h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="c">ขั้น</th><th class="num">ความคืบหน้าเค้ก</th><th class="num">จำนวนที่ต้องส่งส่วนตัว</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="c">1</td><td class="num">150,000</td><td class="num">25</td><td>กล่องปาร์ตี้ 21st ×10</td></tr>
+          <tr><td class="c">2</td><td class="num">300,000</td><td class="num">50</td><td>หัวใจจริงใจ 1000% ×20</td></tr>
+          <tr><td class="c">3</td><td class="num">450,000</td><td class="num">75</td><td>ชิ้นส่วนประกายเงิน ×10</td></tr>
+          <tr><td class="c">4</td><td class="num">600,000</td><td class="num">100</td><td>ถุงกุญแจล็อกเกอร์ II ×5</td></tr>
+          <tr><td class="c">5</td><td class="num">750,000</td><td class="num">125</td><td>ถุงกุญแจเปล่งประกาย II ×2</td></tr>
+          <tr><td class="c">6</td><td class="num">1,050,000</td><td class="num">150</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td></tr>
+          <tr><td class="c">7</td><td class="num">1,350,000</td><td class="num">175</td><td>ถุงกุญแจหรูหรา II ×1</td></tr>
+          <tr><td class="c">8</td><td class="num">1,650,000</td><td class="num">200</td><td>ถุงเหรียญพริซมา (พิเศษ) ×1</td></tr>
+          <tr><td class="c">9</td><td class="num">1,950,000</td><td class="num">225</td><td>สิทธิ์เลือกคริสตัล 21st ×1</td></tr>
+          <tr><td class="c">10</td><td class="num">2,250,000</td><td class="num">250</td><td>กล่องปาร์ตี้ 21st ×10</td></tr>
+          <tr><td class="c">11</td><td class="num">2,700,000</td><td class="num">275</td><td>ถุงกุญแจเปล่งประกาย II ×3</td></tr>
+          <tr><td class="c">12</td><td class="num">3,150,000</td><td class="num">300</td><td>ชิ้นส่วนประกายเงิน ×10</td></tr>
+          <tr><td class="c">13</td><td class="num">3,600,000</td><td class="num">325</td><td>ถุงเหรียญพริซมา (พิเศษ) ×1</td></tr>
+          <tr><td class="c">14</td><td class="num">4,050,000</td><td class="num">350</td><td>ถุงกุญแจหรูหรา II ×2</td></tr>
+          <tr><td class="c">15</td><td class="num">4,500,000</td><td class="num">375</td><td>เข็มทิศแห่งโชคชะตา ×1</td></tr>
+          <tr><td class="c">16</td><td class="num">5,100,000</td><td class="num">400</td><td>Prisma Prism Compact ×1</td></tr>
+          <tr><td class="c">17</td><td class="num">5,700,000</td><td class="num">425</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="c">18</td><td class="num">6,300,000</td><td class="num">450</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td></tr>
+          <tr><td class="c">19</td><td class="num">6,900,000</td><td class="num">475</td><td>ถุงกุญแจล็อกเกอร์ II ×5</td></tr>
+          <tr><td class="c">20</td><td class="num">7,500,000</td><td class="num">500</td><td>สิทธิ์เลือกคริสตัล 21st ×1</td></tr>
+          <tr><td class="c">21</td><td class="num">8,250,000</td><td class="num">525</td><td>ถุงกุญแจเปล่งประกาย II ×3</td></tr>
+          <tr><td class="c">22</td><td class="num">9,000,000</td><td class="num">550</td><td>ถุงเหรียญพริซมา (พิเศษ) ×1</td></tr>
+          <tr><td class="c">23</td><td class="num">9,750,000</td><td class="num">575</td><td>กล่องปาร์ตี้ 21st ×10</td></tr>
+          <tr><td class="c">24</td><td class="num">10,500,000</td><td class="num">600</td><td>ถุงกุญแจหรูหรา II ×2</td></tr>
+          <tr><td class="c">25</td><td class="num">11,250,000</td><td class="num">625</td><td>ชิ้นส่วนประกายเงิน ×10</td></tr>
+          <tr><td class="c">26</td><td class="num">12,000,000</td><td class="num">650</td><td>เข็มทิศแห่งโชคชะตา ×1</td></tr>
+          <tr><td class="c">27</td><td class="num">12,750,000</td><td class="num">675</td><td>ถุงกุญแจระดับตำนาน II ×1</td></tr>
+          <tr><td class="c">28</td><td class="num">13,500,000</td><td class="num">700</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td></tr>
+          <tr><td class="c">29</td><td class="num">14,250,000</td><td class="num">725</td><td><b>สิทธิ์เลือกประกายเงิน ×1</b></td></tr>
+          <tr><td class="c">30</td><td class="num">15,000,000</td><td class="num">750</td><td><b>กระดาษคำอธิษฐาน 21st ×1</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>รางวัลการมีส่วนร่วมส่วนบุคคล (ตามจำนวนที่ส่งสะสม)</h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="num">ส่งสะสม</th><th>รางวัล</th><th class="num">ส่งสะสม</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="num">10</td><td>หัวใจจริงใจ 1000% ×20</td><td class="num">460</td><td>สิทธิ์เลือกคริสตัล 21st ×1</td></tr>
+          <tr><td class="num">20</td><td>ตั๋วแลกวัตถุดิบ Prestige ×1</td><td class="num">500</td><td>ตั๋วแลกวัตถุดิบ Prestige ×1</td></tr>
+          <tr><td class="num">30</td><td>Prisma Prism Compact ×1</td><td class="num">550</td><td>ตั๋วกล่องระดับตำนาน ×20</td></tr>
+          <tr><td class="num">40</td><td>ตั๋วแลกวัตถุดิบ Mythology ×1</td><td class="num">600</td><td>ตั๋วกล่องเจิดจรัส ×20</td></tr>
+          <tr><td class="num">50</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td><td class="num">650</td><td>ถุงเหรียญพริซมา (พิเศษ) ×1</td></tr>
+          <tr><td class="num">70</td><td>ตั๋วกล่องระดับตำนาน ×20</td><td class="num">700</td><td>Lite.1 สิทธิ์เปลี่ยนระดับ Legendary ×1</td></tr>
+          <tr><td class="num">90</td><td>ตั๋วกล่องเจิดจรัส ×20</td><td class="num">750</td><td>ไม้เท้าเวทของโปรเฟสเซอร์ ×1</td></tr>
+          <tr><td class="num">110</td><td>ถุงเหรียญพริซมา (พิเศษ) ×1</td><td class="num">800</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td></tr>
+          <tr><td class="num">130</td><td>ถุงคริสตัล 21st ×1</td><td class="num">850</td><td>สิทธิ์เลือกคริสตัล 21st ×1</td></tr>
+          <tr><td class="num">150</td><td>ไม้เท้าเวทของโปรเฟสเซอร์ ×1</td><td class="num">900</td><td>กล่องพิเศษของที่ระลึกแห่งชัยชนะ ×1</td></tr>
+          <tr><td class="num">180</td><td>ถุงเหรียญพริซมา (พิเศษ) ×1</td><td class="num">950</td><td>Master Running Potion ×1</td></tr>
+          <tr><td class="num">210</td><td>สิทธิ์เลือกคริสตัล 21st ×1</td><td class="num">1,000</td><td><b>กระดาษคำอธิษฐาน 21st ×1</b></td></tr>
+          <tr><td class="num">240</td><td>ตั๋วแลกวัตถุดิบ Mythology ×1</td><td class="num">1,025 ขึ้นไป</td><td>ถุงนำโชค TR (กลาง) ×1 ทุก ๆ 25 ครั้ง<br>(ถึง 1,750)</td></tr>
+          <tr><td class="num">270</td><td>Lite.1 กล่องสิทธิ์เปลี่ยนระดับ ×1</td><td class="num">—</td><td>—</td></tr>
+          <tr><td class="num">300</td><td>ตั๋วกล่องระดับตำนาน ×20</td><td class="num">—</td><td>—</td></tr>
+          <tr><td class="num">340</td><td>ตั๋วกล่องเจิดจรัส ×20</td><td class="num">—</td><td>—</td></tr>
+          <tr><td class="num">380</td><td>ถุงเหรียญพริซมา (พิเศษ) ×1</td><td class="num">—</td><td>—</td></tr>
+          <tr><td class="num">420</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td><td class="num">—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BINGO ================= -->
+<section id="bingo">
+  <div class="sec-head">
+    <div class="sec-num">4</div>
+    <div><h2>สแตมป์บิงโก 21 ปี!<span class="ko">21주년 스탬프 빙고!</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>ใช้งานผ่าน NPC <b>ลูซี่ (루시)</b> ในสวนสาธารณะ</p>
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/4AwGlcZ8MCujijPRsbTsgx.jpg" alt="หน้าจอสแตมป์บิงโก" loading="lazy">
+      <figcaption>ใช้ <b>[ตั๋วสแตมป์บิงโก 21st] ×1</b> เพื่อเปิดช่องบิงโก 1 ช่อง</figcaption>
+    </figure>
+
+    <h4>กติกา</h4>
+    <ul>
+      <li>เปิดช่อง 1 ช่อง → ได้รับ <b>รางวัลการเปิดช่อง</b> ทันที</li>
+      <li>เมื่อเปิดช่องที่เลือก จะมี <b>อีก 1 ช่องที่ไม่ได้เลือกเปิดขึ้นแบบสุ่ม</b>ด้วย</li>
+      <li>เปิดได้สูงสุด <b>8 ครั้งต่อกระดาน</b> → รวมเปิดทั้งหมด <b>16 ช่อง</b></li>
+      <li>เมื่อทำบิงโกได้ จะได้รับรางวัลตามจำนวนแถวบิงโก</li>
+      <li>เมื่อเปิดครบ 16 ช่อง จะเปิดเผย <b>“บิงโกซ่อน (히든 빙고)”</b> — หากตรงกับแถวที่ทำได้ รับรางวัลบิงโกซ่อนเพิ่ม</li>
+      <li>เมื่อใช้สิทธิ์เปิดครบแล้ว สามารถรีเซ็ตกระดานใหม่ได้</li>
+    </ul>
+    <div class="note">※ ต้องรับรางวัลบิงโกที่ได้ทั้งหมดก่อน จึงจะรีเซ็ตกระดานได้</div>
+
+    <div class="grid g2">
+      <div>
+        <h4>แหล่งได้รับตั๋วสแตมป์บิงโก 21st</h4>
+        <ul>
+          <li>ดรอปจากแมปช่อง Magical Prisma</li>
+          <li>กล่องเทศกาล 21st (ภารกิจ Tales Book)</li>
+        </ul>
+        <p style="font-size:14px;color:var(--ink-3)">แลกเปลี่ยน (คลิกขวา): ตั๋ว ×1 → EXP +500</p>
+      </div>
+      <div>
+        <h4>รางวัลการเปิดช่อง (สุ่ม)</h4>
+        <ul style="font-size:14px">
+          <li>TR +10,000 / TR +5,000</li>
+          <li>ไม้เท้าเทพเพชร ×2</li>
+          <li>เหรียญพริซมา ×1 · กุญแจพริซมา ×1</li>
+          <li>โพชั่นตกปลาอัตโนมัติพริซมา ×1</li>
+          <li>เหรียญที่ระลึก 21st ×1 หรือ ×3</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>รางวัลบิงโก</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="c">ขั้น</th><th>รางวัล</th><th>ของในกล่อง</th></tr></thead>
+        <tbody>
+          <tr><td class="c">1 แถว</td><td>กล่องสแตมป์บิงโก 1</td><td><ul class="st"><li>เหรียญที่ระลึก 21st ×1</li><li>โพชั่นตลาด 21 ปี (เล็ก) ×1</li></ul></td></tr>
+          <tr><td class="c">2 แถว</td><td>กล่องสแตมป์บิงโก 2</td><td><ul class="st"><li>เหรียญที่ระลึก 21st ×2</li><li>โพชั่นตลาด 21 ปี (เล็ก) ×2</li></ul></td></tr>
+          <tr><td class="c">3 แถว</td><td>กล่องสแตมป์บิงโก 3</td><td><ul class="st"><li>เหรียญที่ระลึก 21st ×2</li><li>โพชั่นตลาด 21 ปี (เล็ก) ×3</li></ul></td></tr>
+          <tr><td class="c">4 แถว</td><td>กล่องสแตมป์บิงโก 4</td><td><ul class="st"><li>เหรียญที่ระลึก 21st ×3</li><li>ตั๋วสแตมป์บิงโก ×8</li></ul></td></tr>
+          <tr style="background:var(--brand-soft)"><td class="c"><b>ซ่อน</b></td><td colspan="2"><b>ห่อของที่ระลึก 21st ×10</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>รางวัลสะสมจำนวนบิงโก</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="num">ครั้ง</th><th>รางวัล</th><th class="num">ครั้ง</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="num">10</td><td>Master Coin ×200</td><td class="num">90</td><td>Lite.1 กล่องสิทธิ์เปลี่ยนระดับ ×1</td></tr>
+          <tr><td class="num">20</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×2</td><td class="num">100</td><td>กระดาษคำอธิษฐาน 21st ×1</td></tr>
+          <tr><td class="num">30</td><td>ถุงคริสตัล 21st ×1</td><td class="num">110</td><td><b>สิทธิ์เลือกประกายเงิน ×1</b></td></tr>
+          <tr><td class="num">40</td><td>เหรียญที่ระลึก 21st ×3,000</td><td class="num">120</td><td>สิทธิ์เลือกคริสตัล 21st ×3</td></tr>
+          <tr><td class="num">50</td><td>กล่องปาร์ตี้ 21st ×15</td><td class="num">130</td><td>Lite.1 สิทธิ์เปลี่ยนระดับ Legendary ×1</td></tr>
+          <tr><td class="num">60</td><td>อัญมณีหัวใจที่ถูกเลือก ×100</td><td class="num">140</td><td>Master Running Potion ×1</td></tr>
+          <tr><td class="num">70</td><td>ชิ้นส่วนประกายเงิน ×30</td><td class="num">150</td><td>ฉายา <b>“สแตมป์บิงโกของลูซี่!”</b></td></tr>
+          <tr><td class="num">80</td><td>หัวใจจริงใจ 1000% ×50</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="fig-sm">
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/2gFB0MQs8PLHFhPbJrHikF.png" alt="ฉายาสแตมป์บิงโกของลูซี่" loading="lazy">
+      <figcaption>ฉายา <b>“สแตมป์บิงโกของลูซี่!”</b> — ระดับ Legendary</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= SAFE ================= -->
+<section id="safe">
+  <div class="sec-head">
+    <div class="sec-num">5</div>
+    <div><h2>ตู้เซฟทองคำของสฟิงซ์<span class="ko">스핑크스의 황금 금고</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>ใช้งานผ่าน NPC <b>สฟิงซ์ (스핑크스)</b> ในสวนสาธารณะ</p>
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/07Iw5hqV0njVnMqkfrLK6p.jpg" alt="ตู้เซฟทองคำของสฟิงซ์" loading="lazy">
+      <figcaption>เลือกรหัสผ่านจาก <b>1 – 9999</b> แล้วใช้ <b>[กุญแจตู้เซฟทองคำ 21st] ×1</b> เพื่อไข</figcaption>
+    </figure>
+
+    <div class="grid g2">
+      <div>
+        <h4>กติกา</h4>
+        <ul>
+          <li>ทายรหัสผิด → จำนวนครั้งที่พยายามเพิ่มขึ้น และได้รับ <b>[เหรียญที่ระลึก 21st] ×3</b></li>
+          <li><b>รางวัลเมื่อไขสำเร็จจะดีขึ้นตามจำนวนครั้งที่พยายาม</b></li>
+          <li>เมื่อเกิน <b>14 ครั้ง</b> รหัสผ่านจะถูกรีเซ็ตใหม่</li>
+        </ul>
+      </div>
+      <div>
+        <h4>แหล่งได้รับกุญแจตู้เซฟทองคำ 21st</h4>
+        <ul>
+          <li>ดรอปจากแมปช่อง Magical Prisma</li>
+          <li>กล่องเทศกาล 21st (ภารกิจ Tales Book)</li>
+        </ul>
+        <p style="font-size:14px;color:var(--ink-3)">แลกเปลี่ยน (คลิกขวา): กุญแจ ×1 → EXP +500</p>
+      </div>
+    </div>
+
+    <h4>รางวัลเมื่อไขสำเร็จ (แบ่งตามจำนวนครั้งที่พยายาม)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th style="width:22%">พยายาม 1–5 ครั้ง <span class="pill p-brand">ดีที่สุด</span></th><th style="width:26%">พยายาม 6–10 ครั้ง</th><th style="width:26%">พยายาม 11–13 ครั้ง</th><th style="width:26%">พยายาม 14 ครั้ง</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><ul class="st"><li>กระดาษคำอธิษฐาน 21st ×1</li><li>หนังสือเวทอีฟนิ่งเซราฟิม ×5</li><li>Prisma Prism Compact ×3</li><li>หัวใจจริงใจ 1000% ×50</li><li>อัญมณีหัวใจที่ถูกเลือก ×1,000</li><li>ถุงเหรียญพริซมา (พิเศษ) ×10</li><li>ถุงกุญแจระดับตำนาน II ×3</li><li>ไม้เท้าเวทของโปรเฟสเซอร์ ×5</li><li>กล่องผู้พิทักษ์แห่งท้องทะเล ×1</li><li>กล่อง 7 มหาชิ้นส่วน ×1</li><li>กล่อง 7 มหาปฐม ×1</li><li>กล่องพิเศษของที่ระลึกแห่งชัยชนะ ×1</li><li>Lite.1 สิทธิ์เปลี่ยนระดับ Prestige / Prime / Rainbow / Gold ×1</li><li>Master Running Potion ×1</li><li>คันเบ็ด TR 3 วัน</li></ul></td>
+            <td><ul class="st"><li>ถุงคริสตัล 21st ×1</li><li>ห่อของที่ระลึก 21st ×100</li><li>หนังสือเวทอีฟนิ่งเซราฟิม ×1</li><li>กุญแจอีฟนิ่งเซราฟิม ×2</li><li>หัวใจจริงใจ 1000% ×20</li><li>อัญมณีหัวใจที่ถูกเลือก ×300</li><li>กล่องพริซมา ×100</li><li>ถุงเหรียญพริซมา (พิเศษ) ×5</li><li>ถุงกุญแจหรูหรา II ×10</li><li>ไม้เท้าโปรเฟสเซอร์ ×500</li><li>ตำนานมังกรน้ำ ×1</li><li>ตั๋วแลกวิญญาณ 7 มหาสัญญา ×1</li><li>ตั๋วแลกพลัง 7 มหาปฐม ×1</li><li>Lite.1 สิทธิ์เปลี่ยนระดับ Legendary ×1</li><li>ตั๋วกล่องระดับตำนาน ×20</li><li>ตั๋วกล่องหรูหรา ×30</li><li>Senior Running Potion ×1</li><li>ถุงผลไม้พิเศษ ×2</li><li>คันเบ็ด TR 3 ชั่วโมง</li></ul></td>
+            <td><ul class="st"><li>ห่อของที่ระลึก 21st ×25</li><li>ขนนกอีฟนิ่งเซราฟิม ×1</li><li>Prisma Special Compact ×2</li><li>หัวใจจริงใจ 1000% ×20</li><li>อัญมณีหัวใจที่ถูกเลือก ×50</li><li>กล่องพริซมา ×1</li><li>กุญแจพริซมา ×30</li><li>ถุงเหรียญพริซมา (กลาง) ×1</li><li>โพชั่นแปลงร่างพริซมา ×50</li><li>ถุงกุญแจเปล่งประกาย II ×3</li><li>ไม้เท้าโปรเฟสเซอร์ ×100</li><li>เข็มทิศทองคำ ×3</li><li>Magical Sign ×3</li><li>หนอนบุ้ง ×10</li><li>วาจาเสียดแทงวิญญาณ ×20</li><li>Master Coin ×30</li><li>ตั๋วกล่องหรูหรา ×9</li><li>ตั๋วกล่องเปล่งประกาย ×12</li><li>Junior/Beginner Running Potion ×1</li><li>ถุงผลไม้เล็ก ×10</li><li>ไม้เท้าอัศวินดอกไม้ ×100</li><li>สิทธิ์เลือกไม้เท้าระดับกลาง ×1</li><li>ไม้เท้าเทพเพชร ×150</li><li>คันเบ็ด TR 1 ชั่วโมง</li><li>คูปองปรับขนาด ×2</li><li>คูปองย้อมสี ×5</li></ul></td>
+            <td><ul class="st"><li>ห่อของที่ระลึก 21st ×10</li><li>Prisma Special Compact ×1</li><li>หัวใจจริงใจ 1000% ×10</li><li>อัญมณีหัวใจที่ถูกเลือก ×10</li><li>กล่องพริซมา ×3</li><li>กุญแจพริซมา ×3</li><li>เหรียญพริซมา ×30</li><li>โพชั่นแปลงร่างพริซมา ×10</li><li>ถุงกุญแจล็อกเกอร์ II ×3</li><li>ไม้เท้าโปรเฟสเซอร์ ×20</li><li>เข็มทิศทองคำ ×1</li><li>Magical Sign ×1</li><li>หนอนบุ้ง ×3</li><li>วาจาเสียดแทงวิญญาณ ×5</li><li>Pure Therapy ×15</li><li>Prism Star ×25</li><li>Master Coin ×10</li><li>ตั๋วกล่องเปล่งประกาย ×3</li><li>ตั๋วกล่องธรรมดา ×3</li><li>ไม้เท้าธาตุต่าง ๆ อย่างละ ×20</li><li>ไม้เท้าเทพเพชร ×50</li><li>คันเบ็ด TR 15 นาที</li><li>คูปองปรับขนาด ×1</li><li>คูปองย้อมสี ×2</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip">💡 <b>เคล็ดลับ:</b> ยิ่งไขสำเร็จด้วยจำนวนครั้งน้อย รางวัลยิ่งดีมาก — กลุ่ม 1–5 ครั้งมีทั้ง Lite.1 Prestige, กล่อง 7 มหา และคันเบ็ด 3 วัน</div>
+  </div>
+</section>
+
+<!-- ================= LUCKY ================= -->
+<section id="lucky">
+  <div class="sec-head">
+    <div class="sec-num">6</div>
+    <div><h2>สุ่มเลขนำโชค<span class="ko">행운의 번호 뽑기</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>เข้าใช้งานผ่านปุ่ม <b>“สุ่มเลขนำโชค”</b> ในแบนเนอร์อีเวนต์ 21 ปี</p>
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/5aIMo489oKi07HNAreW9xp.jpg" alt="หน้าจอสุ่มเลขนำโชค" loading="lazy">
+      <figcaption>เลือกไอเทมที่ต้องการ แล้วใช้ <b>[บัตรสุ่มเลขนำโชค]</b> เพื่อสุ่มหมายเลข</figcaption>
+    </figure>
+
+    <h4>รอบการแข่งขัน (วันละ 3 รอบ · จัดอันดับแยกแต่ละรอบ)</h4>
+    <div class="tw t-sm fig-sm">
+      <table>
+        <thead><tr><th class="c">รอบ</th><th>เวลา</th></tr></thead>
+        <tbody>
+          <tr><td class="c">รอบที่ 1</td><td>05:00 – 12:55</td></tr>
+          <tr><td class="c">รอบที่ 2</td><td>13:00 – 20:55</td></tr>
+          <tr><td class="c">รอบที่ 3</td><td>21:00 – 03:00 ของวันถัดไป</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">※ วันปิดปรับปรุง 2026.09.02 รอบที่ 1 จะเริ่มตั้งแต่ปิดปรับปรุงเสร็จจนถึง 12:55</div>
+
+    <ul>
+      <li>หลังจบรอบจะใช้เวลาสรุปผล <b>5 นาที</b> แล้วส่งรางวัลเข้ากล่องของขวัญ</li>
+      <li>เมื่อรอบใหม่เริ่ม สามารถกด <b>[ดูผลลัพธ์]</b> เพื่อดูผลของรอบก่อนหน้าได้</li>
+    </ul>
+
+    <div class="grid g2">
+      <div>
+        <h4>แหล่งได้รับบัตรสุ่มเลขนำโชค</h4>
+        <ul><li>ห่อของที่ระลึก 21st</li><li>กล่องเทศกาล 21st (ภารกิจ Tales Book)</li></ul>
+        <p style="font-size:14px;color:var(--ink-3)">แลกเปลี่ยน (คลิกขวา): บัตร ×1 → EXP +100</p>
+      </div>
+      <div>
+        <h4>เกณฑ์การจัดอันดับ</h4>
+        <ol style="padding-left:20px;font-size:14px">
+          <li>ผู้ที่ได้ชุดหมายเลข<b>สูงที่สุด</b>ได้อันดับสูงกว่า</li>
+          <li>หากชุดหมายเลขสูงสุดเท่ากัน ผู้ที่ทำได้<b>จำนวนครั้งมากกว่า</b>ได้อันดับสูงกว่า</li>
+          <li>หากจำนวนครั้งเท่ากัน ผู้ที่ถึงจำนวนนั้น<b>ก่อน</b>ได้อันดับสูงกว่า</li>
+          <li>เมื่อได้ชุดหมายเลขที่สูงกว่า จำนวนครั้งจะถูกนับใหม่ตามหมายเลขนั้น</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="tip">
+      <b>ประเภทการได้รางวัล:</b><br>
+      • <b>ชนะตามอันดับ (순위 당첨):</b> มอบรางวัลให้ผู้ที่มีหมายเลขสูงสุด<br>
+      • <b>ชนะจากการจับฉลาก (추첨 당첨):</b> สุ่มจากผู้เข้าร่วมที่เหลือหลังหักผู้ชนะตามอันดับ
+    </div>
+    <div class="note">※ จำนวนผู้ที่ชนะตามอันดับ/จับฉลากแตกต่างกันไปตามไอเทมแต่ละชนิด</div>
+
+    <h4>รางวัลหมายเลขพิเศษ (Special Number)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="c">หมายเลข</th><th>รางวัล</th><th class="c">หมายเลข</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="c">11111</td><td>หนังสือเวทอีฟนิ่งเซราฟิม ×1</td><td class="c">10000</td><td>ไม้เท้าเทพเพชร ×5,000</td></tr>
+          <tr><td class="c">22222</td><td>กุญแจอีฟนิ่งเซราฟิม ×1</td><td class="c">20000</td><td>ไม้เท้าโปรเฟสเซอร์ ×200</td></tr>
+          <tr><td class="c">33333</td><td>หนังสือเวทเซราฟิมที่ถูกผนึก ×3</td><td class="c">30000</td><td>Master Coin ×100</td></tr>
+          <tr><td class="c">44444</td><td>หัวใจจริงใจ 1000% ×10</td><td class="c">40000</td><td>TR +10,000,000</td></tr>
+          <tr><td class="c">55555</td><td>Prisma Special Compact ×3</td><td class="c">50000</td><td>ตั๋วแลกวัตถุดิบ Prestige ×1</td></tr>
+          <tr><td class="c">66666</td><td>เหรียญพริซมา ×300</td><td class="c">60000</td><td>Prestige Box อเนกประสงค์ ×1</td></tr>
+          <tr><td class="c">77777</td><td>แต้มการมีส่วนร่วมพริซมา (พิเศษ) ×2</td><td class="c">70000</td><td>คันเบ็ด TR 2 ชั่วโมง</td></tr>
+          <tr><td class="c">88888</td><td>ถุงกุญแจระดับตำนาน II ×3</td><td class="c">80000</td><td>Senior Running Potion ×1</td></tr>
+          <tr><td class="c">99999</td><td>ถุงกุญแจล็อกเกอร์ II ×20</td><td class="c">90000</td><td>ตั๋วกล่องเจิดจรัส ×20</td></tr>
+          <tr><td class="c">12345</td><td>ตั๋วกล่องระดับตำนาน ×15</td><td class="c">45454</td><td>ตั๋วแลกพลัง 7 มหาปฐม ×1</td></tr>
+          <tr><td class="c">56789</td><td>Lite.1 สิทธิ์เปลี่ยนระดับ Legendary ×1</td><td class="c">56565</td><td>คูปองสกิน TalesLook ×50</td></tr>
+          <tr><td class="c">12121</td><td>Lite.1 สิทธิ์เปลี่ยนสัตว์เลี้ยงลับ ×1</td><td class="c">67676</td><td>ชิ้นส่วนประกายเงิน ×5</td></tr>
+          <tr><td class="c">21212</td><td>ถุงผลไม้พิเศษ ×2</td><td class="c">78787</td><td>Magical Sign ×5</td></tr>
+          <tr><td class="c">23232</td><td>ตำนานมังกรน้ำ ×1</td><td class="c">89898</td><td>ถุงคริสตัล 21st ×1</td></tr>
+          <tr><td class="c">34343</td><td>ตั๋วแลกวิญญาณ 7 มหาสัญญา ×1</td><td class="c">90909</td><td>สิทธิ์เลือกคริสตัล 21st ×1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14px;color:var(--ink-3)">🍀 <b>Lucky Number:</b> ห่อของที่ระลึก 21st ×1</p>
+
+    <h4>รางวัลแต้มสะสม (นับตามจำนวนบัตรที่ใช้)</h4>
+    <div class="tw t-sm fig-sm">
+      <table>
+        <thead><tr><th class="num">แต้มสะสม</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="num">800</td><td>กุญแจพริซมา ×10</td></tr>
+          <tr><td class="num">1,600</td><td>โพชั่นตลาด 21 ปี (ใหญ่) ×1</td></tr>
+          <tr><td class="num">2,400</td><td><b>ชิ้นส่วนประกายเงิน ×30</b></td></tr>
+          <tr><td class="num">3,200</td><td>โพชั่นตลาด 21 ปี (ใหญ่) ×2</td></tr>
+          <tr><td class="num">4,000</td><td>ถุงกุญแจระดับตำนาน II ×3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LALA ================= -->
+<section id="lala">
+  <div class="sec-head">
+    <div class="sec-num">7</div>
+    <div><h2>กล่องของขวัญของลาล่า<span class="ko">라라의 선물 상자</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>เข้าใช้งานผ่านปุ่ม <b>“กล่องของขวัญของลาล่า”</b> ในแบนเนอร์อีเวนต์ 21 ปี</p>
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/6is0NbRUHdrlb3Ue6SMssf.jpg" alt="กล่องของขวัญของลาล่า" loading="lazy">
+      <figcaption>ตัวจับเวลาเดินต่อเนื่องแม้ล็อกเอาต์ — เมื่อเวลาเหลือ 0 จะได้รางวัลปกติ 1 ชิ้น</figcaption>
+    </figure>
+    <ul>
+      <li>เวลาเดินต่อเนื่อง<b>ไม่ว่าจะล็อกอินหรือล็อกเอาต์</b> เริ่มนับจากเวลาที่เข้าเกมครั้งแรก</li>
+      <li>ใช้ <b>ไอเทมลดเวลา</b> เพื่อลดเวลาที่เหลือได้</li>
+      <li>ทุกครั้งที่ได้รางวัลปกติครบ <b>4 ชิ้น</b> จะได้ <b>รางวัลพิเศษ 1 ชิ้น</b></li>
+      <li>สะสมรางวัลได้สูงสุด <b>100 ชิ้น</b> — เมื่อเต็มแล้วตัวจับเวลาจะหยุดนับ</li>
+      <li>กดปุ่ม <b>“รับรางวัล”</b> เพื่อเก็บของ</li>
+    </ul>
+
+    <div class="grid g2">
+      <div>
+        <h4>รางวัลปกติ</h4>
+        <ul style="font-size:14px">
+          <li>Master / Senior / Junior / Beginner Running Potion ×1</li>
+          <li>โพชั่นตลาด 21 ปี (เล็ก) ×5 หรือ ×3</li>
+          <li>EXP Random Box ×2 หรือ ×1</li>
+        </ul>
+      </div>
+      <div>
+        <h4>ไอเทมลดเวลา (แลกคลิกขวา)</h4>
+        <div class="tw t-sm">
+          <table>
+            <thead><tr><th>ไอเทม</th><th>แปลงเป็น</th></tr></thead>
+            <tbody>
+              <tr><td>บัตรลดเวลา 1 ชั่วโมง ×1</td><td>EXP +6,000</td></tr>
+              <tr><td>บัตรลดเวลา 30 นาที ×1</td><td>EXP +3,000</td></tr>
+              <tr><td>บัตรลดเวลา 1 นาที ×1</td><td>EXP +100</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <h4>รางวัลพิเศษ</h4>
+    <div style="font-size:14px"><ul class="st"><li>หนังสือเวทอีฟนิ่งเซราฟิม ×1</li><li>Prisma Special Compact ×1</li><li>หนังสือเวทเซราฟิมที่ถูกผนึก ×1</li><li>ห่อของที่ระลึก 21st ×20</li><li>โพชั่นแปลงร่างพริซมา ×5</li><li>โพชั่นตกปลาอัตโนมัติพริซมา ×5</li><li>โพชั่นตลาด 21 ปี (กลาง) ×3/×2/×1</li><li>ไม้เท้าโปรเฟสเซอร์ ×30</li><li>หัวใจจริงใจ 1000% ×5</li><li>แต้มการมีส่วนร่วมพริซมา (เล็ก) ×3</li><li>ถุงกุญแจล็อกเกอร์ II ×1</li><li>เข็มทิศพิเศษ I–IV ×1</li><li>เข็มทิศทองคำ ×1</li><li>เข็มทิศธรรมดา ×3</li><li>Magical Sign ×1</li><li>วาจาเสียดแทงวิญญาณ ×3</li><li>เหรียญที่ระลึก 21st ×100/×50/×30</li></ul></div>
+  </div>
+</section>
+
+<!-- ================= EXCHANGE ================= -->
+<section id="exchange">
+  <div class="sec-head">
+    <div class="sec-num">8</div>
+    <div><h2>ร้านแลกเปลี่ยนครบรอบ 21 ปี<span class="ko">21주년 교환소</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>ใช้งานผ่าน NPC <b>อองรีที่ 3</b> ในสวนสาธารณะ · เปิด <b>2026.09.02 หลังปิดปรับปรุง → 2026.10.07 ก่อนปิดปรับปรุง</b></p>
+
+    <h4>📜 หมวด กระดาษคำอธิษฐาน 21st (สกุลเงินหายากที่สุด)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ไอเทมที่ได้รับ</th><th class="num">ราคา</th><th class="c">จำกัด/คน</th></tr></thead>
+        <tbody>
+          <tr><td><b>สิทธิ์เลือกประกายเงิน ×1</b></td><td class="num">กระดาษคำอธิษฐาน ×1</td><td class="c">3</td></tr>
+          <tr><td>สิทธิ์เลือกคริสตัล 21st ×1</td><td class="num">×1</td><td class="c">3</td></tr>
+          <tr><td>ถุงคริสตัล 21st ×1</td><td class="num">×1</td><td class="c">3</td></tr>
+          <tr><td>ตั๋วแลกวัตถุดิบ Mythology ×1</td><td class="num">×1</td><td class="c">1</td></tr>
+          <tr><td>ตำนานมังกรน้ำ ×5</td><td class="num">×1</td><td class="c">1</td></tr>
+          <tr><td>Lite.1 สิทธิ์เปลี่ยนระดับ Prestige / Prime / Gold ×1</td><td class="num">×1</td><td class="c">1</td></tr>
+          <tr><td>ชิ้นส่วนสกินพริซมา ×50</td><td class="num">×1</td><td class="c">3</td></tr>
+          <tr><td>Prisming Shard ×50</td><td class="num">×1</td><td class="c">3</td></tr>
+          <tr><td>ไม้เท้าเวทของโปรเฟสเซอร์ ×1</td><td class="num">×1</td><td class="c">3</td></tr>
+          <tr><td>หนังสือเวทอีฟนิ่งเซราฟิม ×3</td><td class="num">×1</td><td class="c">ไม่จำกัด</td></tr>
+          <tr><td>แยมหัวใจพริซมิ่ง ×5</td><td class="num">×1</td><td class="c">ไม่จำกัด</td></tr>
+          <tr><td>กล่องชุด Prisming Melody ×1</td><td class="num">×1</td><td class="c">1</td></tr>
+          <tr><td>ตั๋วแลกวัตถุดิบ Prestige ×1</td><td class="num">×1</td><td class="c">1</td></tr>
+          <tr><td>สิทธิ์เลือกโพชั่นอีเวนต์ ×1</td><td class="num">×1</td><td class="c">1</td></tr>
+          <tr><td>คันเบ็ด TR 3 วัน</td><td class="num">×1</td><td class="c">1</td></tr>
+          <tr><td>ไม้เท้าเทพเพชร ×100,000</td><td class="num">×1</td><td class="c">5</td></tr>
+          <tr><td>Master Running Potion ×1</td><td class="num">×1</td><td class="c">5</td></tr>
+          <tr><td>กระดาษ Allstar 21st ×1</td><td class="num">×1</td><td class="c">3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>🪙 หมวด เหรียญที่ระลึก 21st (ตัวอย่างรายการเด่น)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ไอเทมที่ได้รับ</th><th class="num">ราคา (เหรียญ)</th><th class="c">จำกัด/คน</th></tr></thead>
+        <tbody>
+          <tr><td><b>กระดาษคำอธิษฐาน 21st ×1</b></td><td class="num">2,100</td><td class="c">1</td></tr>
+          <tr><td><b>ชิ้นส่วนประกายเงิน ×10</b></td><td class="num">1,000</td><td class="c">5</td></tr>
+          <tr><td>กล่องปาร์ตี้ 21st ×1</td><td class="num">50</td><td class="c">20</td></tr>
+          <tr><td>เฟรมที่ระลึก 21st ×1</td><td class="num">21</td><td class="c">1 (รีเซ็ตรายวัน)</td></tr>
+          <tr><td>ฉายา <b>“TalesRunner! ครบรอบ 21 ปี!”</b></td><td class="num">210</td><td class="c">1</td></tr>
+          <tr><td>ฉายา <b>“ครีมปาร์ตี้ 21 ปี”</b></td><td class="num">210</td><td class="c">1</td></tr>
+          <tr><td>กล่องของที่ระลึกแห่งชัยชนะ ×1</td><td class="num">2,500</td><td class="c">1</td></tr>
+          <tr><td>ตั๋วกล่องเจิดจรัส ×10</td><td class="num">400</td><td class="c">5</td></tr>
+          <tr><td>ตั๋วกล่องระดับตำนาน ×10</td><td class="num">300</td><td class="c">5</td></tr>
+          <tr><td>ตั๋วกล่องหรูหรา ×10</td><td class="num">200</td><td class="c">5</td></tr>
+          <tr><td>ตั๋วกล่องเปล่งประกาย ×10</td><td class="num">150</td><td class="c">5</td></tr>
+          <tr><td>ตั๋วกล่องธรรมดา ×10</td><td class="num">100</td><td class="c">5</td></tr>
+          <tr><td>Lite.1 สิทธิ์เปลี่ยนระดับ Unique / Rare / Normal</td><td class="num">100 – 80 – 45</td><td class="c">3 – 5 – 5</td></tr>
+          <tr><td>กล่องคอสตูมเก่า (หลายสิบชนิด)</td><td class="num">30 – 120</td><td class="c">5</td></tr>
+          <tr><td>ไม้เท้าเทพเพชร ×100</td><td class="num">10</td><td class="c">ไม่จำกัด</td></tr>
+          <tr><td>ไม้เท้าเทพเพชร ×10</td><td class="num">1</td><td class="c">ไม่จำกัด</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>💱 หมวด แต้มตลาด 21 ปี (거래소 포인트)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ไอเทมที่ได้รับ</th><th class="num">ราคา (แต้ม)</th><th class="c">จำกัด/คน</th></tr></thead>
+        <tbody>
+          <tr><td>Lite.1 กล่องสิทธิ์เปลี่ยนระดับ Private ×1</td><td class="num">12,000</td><td class="c">1</td></tr>
+          <tr><td>Lite.1 กล่องสิทธิ์เปลี่ยนระดับ Special ×1</td><td class="num">6,000</td><td class="c">3</td></tr>
+          <tr><td>ถุงของ Morpheus ×1</td><td class="num">6,000</td><td class="c">1</td></tr>
+          <tr><td>แก่นแท้ Etherlos ×1</td><td class="num">6,000</td><td class="c">1</td></tr>
+          <tr><td>แก่นแท้ Phantas ×1</td><td class="num">6,000</td><td class="c">1</td></tr>
+          <tr><td>Prestige Box อเนกประสงค์ ×1</td><td class="num">5,000</td><td class="c">3</td></tr>
+          <tr><td>สิทธิ์เลือกคริสตัล 21st ×1</td><td class="num">5,000</td><td class="c">3</td></tr>
+          <tr><td>Master Coin ×100</td><td class="num">4,000</td><td class="c">3</td></tr>
+          <tr><td>Lite.0 สิทธิ์เปลี่ยน Time ×1</td><td class="num">2,000</td><td class="c">1</td></tr>
+          <tr><td>เข็มทิศพิเศษ I / II / III / IV ×1</td><td class="num">700</td><td class="c">1 (II–IV รีเซ็ตรายวัน)</td></tr>
+          <tr><td>คันเบ็ด TR 1 ชั่วโมง</td><td class="num">500</td><td class="c">1</td></tr>
+          <tr><td>ไม้เท้าเทพเพชร ×500</td><td class="num">500</td><td class="c">1</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>ฉายาใหม่จากร้านแลกเปลี่ยน</h4>
+    <div class="grid g2">
+      <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/6eNPCRiPW24Oc3O8pUseko.png" alt="ฉายา TalesRunner 21 ปี" loading="lazy"><figcaption>ฉายา <b>“TalesRunner! ครบรอบ 21 ปี!”</b> (Unique)</figcaption></figure>
+      <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/49hnpImwOpjQhQrp6zGino.png" alt="ฉายาครีมปาร์ตี้ 21 ปี" loading="lazy"><figcaption>ฉายา <b>“ครีมปาร์ตี้ 21 ปี”</b> (Unique)</figcaption></figure>
+    </div>
+
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/issue/4Q1mbrRfVAmoQ7aeOVYV1l.png" alt="ตารางร้านแลกเปลี่ยน 21 ปี ฉบับเต็ม" loading="lazy">
+      <figcaption><b>ตารางร้านแลกเปลี่ยนฉบับเต็ม</b> — รวมรายการคอสตูมเก่ากว่า 150 รายการ และร้านคลิกขวาที่แลกไอเทมย้อนยุค (ครบรอบ 10–17 ปี, Halloween, Rainbow ฯลฯ) ด้วย <b>กระดาษ Allstar 21st</b> 1–2 ใบต่อชิ้น</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= MARKET ================= -->
+<section id="market">
+  <div class="sec-head">
+    <div class="sec-num">9</div>
+    <div><h2>ตลาดซื้อขายครบรอบ 21 ปี<span class="ko">21주년 거래소</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>เข้าใช้งานผ่านปุ่ม <b>“ตลาดซื้อขาย”</b> มุมซ้ายบนของห้องรอ</p>
+    <figure>
+      <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/2GYa67puXzQrsr26XCKMyJ.jpg" alt="หน้าจอตลาดซื้อขาย 21 ปี" loading="lazy">
+      <figcaption>ซื้อ-ขายไอเทมในคลังเก็บของด้วย <b>แต้มตลาด (거래소 포인트)</b></figcaption>
+    </figure>
+
+    <div class="note">
+      🔑 <b>ต้องมี [ตั๋วใช้งาน Tales Ticket] จึงจะลงขายหรือซื้อได้</b><br>
+      ※ [ตั๋วใช้งาน Tales Ticket] เป็นสินค้าที่มาพร้อมชุด [Tales Premium Ticket]
+    </div>
+
+    <div class="note">
+      ※ ไอเทมที่เพิ่มเข้ามาตั้งแต่<b>อัปเดตเดือนธันวาคม 2025 ครั้งที่ 1 เป็นต้นไปซื้อขายไม่ได้</b> และไอเทมอีเวนต์คอลแลบ รวมถึงไอเทมระดับ <b>Mythology / Prestige</b> ถูกยกเว้นจากการซื้อขายทั้งหมด ไม่ว่าจะอัปเดตเมื่อใด
+    </div>
+
+    <h4>แหล่งได้รับแต้มตลาด</h4>
+    <div class="grid g2">
+      <div>
+        <ul>
+          <li>ขายไอเทมในตลาด 21 ปี</li>
+          <li>ใช้ <b>[โพชั่นตลาด 21 ปี]</b></li>
+        </ul>
+        <div class="tw t-sm">
+          <table>
+            <thead><tr><th>โพชั่น</th><th>แต้มที่ได้ (EXP UP)</th></tr></thead>
+            <tbody>
+              <tr><td>โพชั่นตลาด 21 ปี (เล็ก / 소)</td><td>10</td></tr>
+              <tr><td>โพชั่นตลาด 21 ปี (กลาง / 중)</td><td>100</td></tr>
+              <tr><td>โพชั่นตลาด 21 ปี (ใหญ่ / 대)</td><td>1,000</td></tr>
+              <tr><td>โพชั่นตลาด 21 ปี (พิเศษ / 특)</td><td>10,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h4>แหล่งได้รับโพชั่นตลาด 21 ปี</h4>
+        <ul>
+          <li>ดรอปจากแมปช่อง Magical Prisma</li>
+          <li>ทำเค้ก 21 ปี</li>
+          <li>สุ่มเลขนำโชค 21 ปี</li>
+          <li>กล่องของขวัญของลาล่า 21 ปี</li>
+          <li>สแตมป์บิงโก 21 ปี</li>
+          <li>กล่องเทศกาล 21st (ภารกิจ Tales Book)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">※ <b>แต้มตลาด 21 ปีจะหมดอายุเมื่ออัปเดตเดือนตุลาคม ครั้งที่ 1</b> โปรดใช้ให้หมดก่อน</div>
+
+    <div class="grid g2">
+      <div>
+        <h4>① การขาย</h4>
+        <ul style="font-size:14.2px">
+          <li>กด <b>[ลงขาย]</b> แล้วใส่ราคาที่ต้องการ (แต้มตลาด)</li>
+          <li>สินค้าที่ลงขายจะเริ่มขายเมื่อถึง<b>ชั่วโมงเต็มถัดไป</b></li>
+          <li>ขายนาน <b>24 ชั่วโมง</b> — เกินแล้วยกเลิกอัตโนมัติ</li>
+          <li>ลงขายได้สูงสุด <b>5 รายการ</b> · หากขายได้แล้ว ต้องรับเงินก่อนจึงลงเพิ่มได้</li>
+          <li>ที่ <b>[สถานะการขายของฉัน]</b> ยกเลิก / เรียกคืนสินค้า / รับเงิน และดูประวัติได้</li>
+          <li>สินค้าที่ลงขายจะหายจากคลัง และกลับมาเมื่อยกเลิก/เรียกคืน</li>
+          <li>เมื่อรับเงิน จะถูก<b>หักค่าธรรมเนียม 20%</b></li>
+          <li>ราคาต่ำสุด <b>1,000</b> แต้ม · สูงสุด <b>999,999</b> แต้ม</li>
+        </ul>
+      </div>
+      <div>
+        <h4>② การซื้อ</h4>
+        <ul style="font-size:14.2px">
+          <li>ค้นหาไอเทมได้ (ภาษาเกาหลี 2 ตัวอักษรขึ้นไป / อังกฤษ-ตัวเลข 4 ตัวขึ้นไป)</li>
+          <li>ค้นหาตามช่วงราคาได้ (ใส่ตัวเลขเท่านั้น)</li>
+          <li>ดู <b>ราคาขายเฉลี่ย</b> และ <b>ราคาต่ำสุดปัจจุบัน</b> ของแต่ละไอเทมได้</li>
+          <li>เมื่อซื้อ แต้มจะถูกหักทันที และไอเทมจะส่งเข้า <b>My Room</b></li>
+        </ul>
+        <div class="tip">รายการซื้อขายรีเฟรช<b>ทุกชั่วโมงตรง</b> และรายการที่ลงในชั่วโมงก่อนหน้าจะถูกจับคู่ขายโดย<b>เรียงจากราคาต่ำสุด</b></div>
+      </div>
+    </div>
+
+    <div class="note">※ ระบบจะตรวจสอบการใช้งานตลาด 21 ปีอย่างต่อเนื่อง หากพบการใช้งานผิดปกติ อาจถูกจำกัดการเล่นตามนโยบายโดยไม่แจ้งเตือนล่วงหน้า</div>
+
+    <div class="dev">
+      <span class="dev-t">★ คอมเมนต์จากทีมพัฒนา ★</span>
+      ตลาด 21 ปีถูกสร้างขึ้นเพื่อเป็นช่องทางให้ได้ไอเทมที่ผ่านมาระยะหนึ่งแล้วกลับมาอีกครั้ง แต้มตลาดหาได้จากดรอปในช่องและคอนเทนต์ 21 ปีหลากหลาย<br><br>
+      อย่างไรก็ตาม เนื่องจากช่องทางได้แต้มมีหลากหลายและทำซ้ำได้ เราจึงประเมินว่าหากไม่มีเงื่อนไขการใช้งาน ตลาดอาจถูกใช้ผิดไปจากเจตนา จึงกำหนดให้เฉพาะผู้ที่มี <b>[ตั๋วใช้งาน Tales Ticket]</b> เท่านั้นที่ซื้อขายได้ เพื่อรักษาสภาพแวดล้อมการซื้อขายที่มั่นคงและเป็นธรรม<br><br>
+      ผู้ที่ไม่ได้ใช้ตลาดก็ยังสามารถนำแต้มไปแลกไอเทมได้ที่ <b>[ร้านแลกเปลี่ยน 21 ปี – แท็บแต้มตลาด]</b>
+    </div>
+  </div>
+</section>
+
+<!-- ================= K-CHAMP ================= -->
+<section id="kchamp">
+  <div class="sec-head">
+    <div class="sec-num">10</div>
+    <div><h2>TalesRunner 2026 K-Championship — รอบคัดเลือกออนไลน์<span class="ko">2026 K-챔피언십 온라인 예선전</span></h2></div>
+  </div>
+  <div class="period">📅 <b>2026.09.02 หลังปิดปรับปรุง → 2026.09.16 ก่อนปิดปรับปรุง</b></div>
+
+  <div class="card">
+    <p>เข้าร่วมผ่านปุ่ม <b>“TalesRunner 2026 K-Championship”</b> มุมซ้ายบนของห้องรอ</p>
+    <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/7UdvS16uKc5YVQFTxMCniN.jpg" alt="K-Championship 2026" loading="lazy"><figcaption>หน้าจอการแข่งขัน K-Championship 2026</figcaption></figure>
+    <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/0IiJc3uI6TMOMVhhsYNYPd.jpg" alt="รายละเอียดการแข่งขัน" loading="lazy"><figcaption>รายละเอียดการแข่งขันและรางวัล</figcaption></figure>
+
+    <div class="note">
+      ※ เข้าร่วมได้เฉพาะผู้ที่มีคุณสมบัติครบทั้ง 3 ข้อ:<br>
+      ① เลเวลรองเท้า <b>Lunawing Boots</b> ขึ้นไป · ② ระยะทางวิ่งสะสม <b>500,000 ม.</b> ขึ้นไป · ③ สมัครเข้าร่วมบนเว็บไซต์และมี <b>[เครื่องหมายเข้าร่วม 2026 K-Championship]</b> ใน My Room
+    </div>
+
+    <h4>ค่าสเตตัสคงที่ (ใช้ในทั้งแมตช์กระชับมิตรและแมตช์ทางการ)</h4>
+    <p style="font-size:14px;color:var(--ink-3)">ไม่ว่าจะสวมไอเทมใด ระบบจะใช้ค่าคงที่ด้านล่าง + ค่าเฉพาะตัวของตัวละครที่สวมอยู่</p>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ค่าสเตตัส</th><th class="c">ค่า</th><th>ค่าสเตตัส</th><th class="c">ค่า</th></tr></thead>
+        <tbody>
+          <tr><td>อมตะช่วงเริ่มเกม</td><td class="c">ON</td><td>ลดเวลาสถานะบูดูดุง</td><td class="c">30%</td></tr>
+          <tr><td>ความเร็วสูงสุด</td><td class="c">16</td><td>ลดเวลาสถานะถาด</td><td class="c">15%</td></tr>
+          <tr><td>อัตราเร่ง</td><td class="c">15</td><td>ความเร็วสะสมโกรธ</td><td class="c">95%</td></tr>
+          <tr><td>พลัง</td><td class="c">15</td><td>ระยะเวลาโกรธ</td><td class="c">90%</td></tr>
+          <tr><td>เพิ่มช่วงตัดสินแดชลงพื้นสำเร็จ</td><td class="c">ON</td><td>เพิ่มความเร็วสูงสุดขณะแดช</td><td class="c">10%</td></tr>
+          <tr><td>เพิ่มระยะเวลาแดชลงพื้นสำเร็จ</td><td class="c">2.7</td><td>เพิ่มเกจแดชสูงสุด</td><td class="c">25%</td></tr>
+          <tr><td>เพิ่มแรงขับ</td><td class="c">20%</td><td>โอกาสหลบ 1 ครั้งเมื่อชนสิ่งกีดขวาง</td><td class="c">1.5%</td></tr>
+          <tr><td>เพิ่มความเร็วว่ายน้ำสูงสุด</td><td class="c">150</td><td><b>หลบการโจมตีโกรธ</b></td><td class="c"><b>100%</b></td></tr>
+          <tr><td>ลดเวลาลุกเมื่อชนสิ่งกีดขวาง</td><td class="c">15%</td><td>โอกาสกลายเป็นผีเมื่อแปลงร่าง</td><td class="c">100%</td></tr>
+          <tr><td>ฟื้นเกจแดชเมื่อจบการแปลงร่าง</td><td class="c">30%</td><td></td><td class="c"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      ※ ค่าเฉพาะตัวของตัวละครใช้เฉพาะค่าที่เกี่ยวกับการวิ่งเท่านั้น — “หลบการโจมตีโกรธ” และ “เพิ่มความเร็วสูงสุดขณะแดช” ถูกตั้งเป็นค่าสูงสุดในรอบคัดอยู่แล้ว จึงไม่นำมาคำนวณซ้ำ<br>
+      ※ เพื่อความลื่นไหลของเกม จะไม่ใช้ค่าสเตตัสเปลี่ยนสกินเพนกวิน/ไก่ และไอเทมเสียง
+    </div>
+
+    <h4>คะแนนตามอันดับ</h4>
+    <div class="tw t-sm fig-sm">
+      <table>
+        <thead><tr><th class="c">อันดับ</th><th class="c">1</th><th class="c">2</th><th class="c">3</th><th class="c">4</th><th class="c">5</th><th class="c">6</th><th class="c">7</th><th class="c">8</th></tr></thead>
+        <tbody><tr><td class="c"><b>คะแนน</b></td><td class="c">27</td><td class="c">22</td><td class="c">18</td><td class="c">14</td><td class="c">11</td><td class="c">8</td><td class="c">5</td><td class="c">3</td></tr></tbody>
+      </table>
+    </div>
+
+    <h4>กติกาการแข่งขัน</h4>
+    <ul>
+      <li>ปรับค่า <b>คอนโทรล</b> ได้อิสระในป๊อปอัป “ดูค่าสเตตัสที่ใช้”</li>
+      <li><b>แมตช์กระชับมิตร:</b> เล่นได้ตลอดเวลา</li>
+      <li><b>แมตช์ทางการ:</b> วันละ 1 ครั้ง เฉพาะ <b>วันธรรมดา 21:00 – 22:00</b> / <b>วันหยุด 21:00 – 22:30</b></li>
+      <li>คำนวณคะแนนรวมจาก <b>300 เกมที่ทำคะแนนสูงสุด</b> ในช่วงแมตช์ทางการ</li>
+      <li>ดูอันดับ / คะแนนรวม / จำนวนครั้งที่เล่น ได้ที่ปุ่ม “คะแนนรวม”</li>
+      <li>เมื่อจบรอบคัด <b>ผู้มีคะแนนรวมสูงสุด 32 คน</b> ได้สิทธิ์เข้าแข่งขันรอบออฟไลน์</li>
+      <li>เข้าร่วมแมตช์ทางการครบ 5 ครั้ง/วัน รับ <b>[กล่อง 2026 K-Championship] ×1</b></li>
+    </ul>
+    <div class="note">
+      ※ ออกจากห้องเกมจะโดนโทษห้ามเข้าใหม่ <b>1 นาที</b><br>
+      ※ วันปิดปรับปรุง 2026.09.02 จะเปิดแมตช์ทางการเพิ่มเป็นกรณีทดลองในเวลา <b>09:00 – 10:00</b> — แมตช์วันนั้นเป็นเกมอุ่นเครื่อง <b>ไม่นับเป็นสถิติ</b><br>
+      ※ แม้ Game Over ก็ยังได้คะแนนตามอันดับเมื่อสรุปผล · หากปิดเกมกลางคันจะได้คะแนนเท่าอันดับ 8<br>
+      ※ อันดับในเกมอัปเดตเวลา <b>01:00 น.</b>
+    </div>
+
+    <h4>รางวัลตามขั้นคะแนน (50 ขั้น)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="c">ขั้น</th><th class="num">คะแนน</th><th>รางวัลหลัก</th></tr></thead>
+        <tbody>
+          <tr><td class="c">1 – 10</td><td class="num">6 – 60</td><td>กล่อง K-Championship ×1 + ตั๋วกล่อง (ธรรมดา→ตำนาน หมุนเวียน) ×1 + ไม้เท้าเทพเพชร ×100<ul class="st"><li><span style="color:var(--ink-3);font-size:13px">ขั้น 3/8 แถมไม้เท้าแชมเปี้ยน ×30</li><li>ขั้น 5 แถมกล่องของที่ระลึกแห่งชัยชนะ ×1</li><li>ขั้น 10 แถม Lite.1 กล่องสิทธิ์เปลี่ยนระดับ ×1</span></li></ul></td></tr>
+          <tr><td class="c">11 – 30</td><td class="num">66 – 180</td><td>กล่อง K-Championship ×1–2 + ตั๋วกล่อง ×1 + ไม้เท้าเทพเพชร ×100 / สิทธิ์เลือกไม้เท้าระดับกลาง ×1<ul class="st"><li><span style="color:var(--ink-3);font-size:13px">ทุกขั้นที่ลงท้าย 3/8 แถมไม้เท้าแชมเปี้ยน ×30</li><li>ลงท้าย 5 แถมกล่องของที่ระลึกแห่งชัยชนะ ×1</li><li>ลงท้าย 0 แถม Lite.1 กล่องสิทธิ์เปลี่ยนระดับ ×1</span></li></ul></td></tr>
+          <tr><td class="c">31 – 49</td><td class="num">186 – 294</td><td>กล่อง K-Championship ×2–3 + ตั๋วกล่อง ×1 + ไม้เท้าเทพเพชร ×100</td></tr>
+          <tr style="background:var(--brand-soft)"><td class="c"><b>50</b></td><td class="num"><b>300</b></td><td><b>กล่อง K-Championship ×3 + ตั๋วกล่องเจิดจรัส ×1 + สิทธิ์เลือกไม้เท้าระดับกลาง ×1 + กล่องพิเศษของที่ระลึกแห่งชัยชนะ ×1</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g2">
+      <figure>
+        <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/issue/579gxE42laX6JdbtYcPomR.png" alt="ตารางรางวัลขั้นคะแนนและของในกล่อง" loading="lazy">
+        <figcaption><b>ตารางรางวัล 50 ขั้นฉบับเต็ม + ของในกล่อง K-Championship</b> — ในกล่องมีคอสตูมย้อนยุคจำนวนมาก (Death Crown, Airport Road, Black Cell, Radiant Glory, Propeller, Taegeuk Uniform ฯลฯ) และ K-Championship Coin ×1–10</figcaption>
+      </figure>
+      <figure>
+        <img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/issue/0eIkqAVWV9FflJueAR5UgK.png" alt="รายชื่อแมปที่ใช้แข่ง" loading="lazy">
+        <figcaption><b>รายชื่อแมปที่ใช้แข่งขัน</b><ul class="st"><li>ระบุว่าแต่ละแมปเปิด/ปิดโหมด “ไอเทมเทียบ 1” และ “ไอเทม OFF”</li><li>◯ = ใช้ &nbsp;/&nbsp; ✕ = ไม่ใช้</li></ul></figcaption>
+      </figure>
+    </div>
+
+    <div class="dev">
+      <span class="dev-t">★ คอมเมนต์จากทีมพัฒนา ★</span>
+      <b>เรื่องคะแนน —</b> เนื่องจากรอบคัดจัดพร้อมกับช่อง Magical Prisma เราจึงตั้งคะแนนที่ต้องใช้สำหรับรางวัลแต่ละขั้นไว้ค่อนข้างต่ำ เพื่อลดภาระการต้องเล่นหลายคอนเทนต์พร้อมกัน หากเข้าร่วมสม่ำเสมอ แม้จะได้อันดับ 8 ทุกเกมก็ยังไปถึงรางวัลขั้นสูงได้ไม่ยาก<br><br>
+      <b>เรื่องค่าสเตตัส —</b> เราตั้ง “หลบการโจมตีโกรธ” เป็น 100% เพื่อลดการกลั่นแกล้งขัดขวางผู้เล่นคนอื่นในรอบคัดที่มีผู้เล่นไม่จำกัด แต่ใน<b>รอบชิงจะใช้ค่า 0%</b> ตามที่เคยประกาศไว้<br><br>
+      <b>เรื่องแมป —</b> แมป <b>(HC) Jjamppong King</b> ใช้เวลาเล่นนานกว่าแมปอื่น จึงถูกตัดออกจากรายชื่อรอบคัด แต่<b>จะถูกนำมาใช้ในรอบชิง</b>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WONDERLAND ================= -->
+<section id="wonderland">
+  <div class="sec-head">
+    <div class="sec-num">11</div>
+    <div><h2>สินค้าใหม่: กล่อง Wonderland<span class="ko">신규 상품 : 원더랜드 상자</span></h2></div>
+  </div>
+  <div class="period">📅 <b>2026.09.02 หลังปิดปรับปรุง → 2026.12.02 ก่อนปิดปรับปรุง</b></div>
+
+  <div class="card">
+    <h3>ราคาและเงื่อนไขการขาย <span class="pill p-cash">Cash</span></h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>สินค้า</th><th class="num">ราคา</th><th>ของแถม</th><th class="c">ส่งของขวัญ</th><th class="c">จำกัด</th></tr></thead>
+        <tbody>
+          <tr><td>กล่อง Wonderland ×1</td><td class="num">1,200</td><td>—</td><td class="c">ได้</td><td class="c">—</td></tr>
+          <tr><td>กล่อง Wonderland ×3</td><td class="num">3,300</td><td>—</td><td class="c">ได้</td><td class="c">—</td></tr>
+          <tr><td>กล่อง Wonderland ×5</td><td class="num">5,000</td><td>—</td><td class="c">ได้</td><td class="c">—</td></tr>
+          <tr><td>กล่อง Wonderland ×10</td><td class="num">10,000</td><td>—</td><td class="c">ได้</td><td class="c">—</td></tr>
+          <tr style="background:var(--amber-soft)"><td><b>กล่อง Wonderland ×20</b></td><td class="num"><b>20,000</b></td><td><b>+ กล่อง Wonderland ×5</b></td><td class="c" style="color:var(--red)">ไม่ได้</td><td class="c">2 ครั้ง/เดือน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">※ ชุด 20 กล่องขายถึง <b>2026.10.21 ก่อนปิดปรับปรุง</b> เท่านั้น</div>
+
+    <h4>ของในกล่อง Wonderland</h4>
+    <ul style="font-size:14.2px">
+      <li>Heart Queen Crown Pack ×1</li>
+      <li>คูปอง Alice Blooming ×1 · คูปอง Rabbit Preppy ×1 · คูปอง Cheshire Street ×1 · คูปอง Hatter Noir ×1</li>
+      <li>Wonderland Token ×2 หรือ ×1</li>
+    </ul>
+
+    <h4>อัตราแลก Wonderland Token</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>สิ่งที่ได้รับ</th><th>ใช้แลก</th></tr></thead>
+        <tbody>
+          <tr><td>Heart Queen Crown Pack ×1</td><td>Wonderland Token ×15</td></tr>
+          <tr><td>คูปอง Alice Blooming / Rabbit Preppy / Cheshire Street ×1</td><td>Token ×5</td></tr>
+          <tr><td>คูปอง Hatter Noir ×1</td><td>Token ×8</td></tr>
+          <tr><td>Token ×150</td><td>Heart Queen Crown Pack ×1 (แลกกลับ)</td></tr>
+          <tr><td>Token ×50</td><td>คูปอง Alice / Rabbit / Cheshire ×1 (แลกกลับ)</td></tr>
+          <tr><td>Token ×80</td><td>คูปอง Hatter Noir ×1 (แลกกลับ)</td></tr>
+          <tr><td>TR +10,000</td><td>Token ×1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14px;color:var(--ink-3)">คูปองแต่ละแบบใช้แลกเป็นชิ้นส่วนถาวรของชุดนั้น ๆ (ผม / ชุดบน+ล่าง / รองเท้า / โบว์ / สร้อยข้อมือ ฯลฯ)</p>
+  </div>
+
+  <div class="card">
+    <h3>คอสตูมและค่าสเตตัส</h3>
+
+    <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/5JiWT0NB0X9FX6VRsJIuxM.png" alt="Heart Queen Crown" loading="lazy">
+      <figcaption><b>Heart Queen Crown (하트퀸 왕관)</b> — Legendary · ตำแหน่ง หัว<ul class="st"><li>ความเร็วสูงสุด +1</li><li>โบนัส EXP 35%</li><li>โบนัส TR 35%</li><li>ลดเวลาลุกเมื่อชนสิ่งกีดขวาง 1%</li><li>โอกาสป้องกันเมื่อโดนเพนกวิน/ไก่ 1%</li><li>EXP สูงสุดต่อรอบ 600</li></ul></figcaption></figure>
+
+    <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/1yjMRqEMroe95kkMkUjvXC.png" alt="ชุด Rabbit Preppy" loading="lazy">
+      <figcaption><b>ชุด Rabbit Preppy (래빗 프레피 세트)</b> — Unique<br>
+      ※ สวมได้เฉพาะตัวละคร <b>โชวอน / ชิโฮ / ดัมยอน</b><br>
+      โบนัสเซ็ตครบ (หัว+ผม / ชุดบน+ล่าง+หาง / รองเท้า / หน้า):<ul class="st"><li>กลิ่นหอม 130%</li><li>โบนัส EXP <b>160%</b></li><li>โบนัส TR <b>160%</b></li><li>EXP สูงสุดต่อรอบ 1200</li></ul></figcaption></figure>
+
+    <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/49nGsl8E9O04Mj8j8Q4AM1.png" alt="ชุด Alice Blooming" loading="lazy">
+      <figcaption><b>ชุด Alice Blooming (앨리스 블루밍 세트)</b> — Unique<br>
+      ※ สวมได้เฉพาะ <b>มิงมิง / รีนา / มากิ / เบร่า / Bloody เบร่า / มีโฮ / ลาล่า / โคลอี้ / ทีที</b><br>
+      โบนัสเซ็ตครบ (ผม+ชุดบนล่าง+รองเท้า+หัว+มือ):<ul class="st"><li>กลิ่นหอม 100%</li><li>โบนัส EXP <b>120%</b></li><li>โบนัส TR <b>120%</b></li><li>EXP สูงสุดต่อรอบ 900</li></ul></figcaption></figure>
+
+    <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/7BGR9gyfWBbiw92ONn7gv6.png" alt="ชุด Cheshire Street" loading="lazy">
+      <figcaption><b>ชุด Cheshire Street (체셔 스트릿 세트)</b> — Unique<br>
+      ※ สวมได้เฉพาะ <b>รัฟ / Hidden รัฟ / ไค / ซุนหงอคง / ฮารัง / ซิด</b><br>
+      ※ ตัวละคร <b>นาร์ซิส</b> จะสวมได้หลังรีนิวเอลในการปิดปรับปรุง 2026.10.07<br>
+      โบนัสเซ็ตครบ:<ul class="st"><li>กลิ่นหอม 100%</li><li>โบนัส EXP <b>120%</b></li><li>โบนัส TR <b>120%</b></li><li>EXP สูงสุดต่อรอบ 900</li></ul></figcaption></figure>
+
+    <div class="grid g2">
+      <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/3sjthKQNjSBpxelrvIgcYS.png" alt="ชุด Hatter Noir ชาย" loading="lazy">
+        <figcaption><b>ชุด Hatter Noir (ชาย)</b> — Unique<br>※ เฉพาะ <b>R / ฮารุ / อาเบล / ชิโอเนล</b><br>โบนัสเซ็ตครบ 6 ชิ้น:<ul class="st"><li>กลิ่นหอม 130%</li><li>EXP <b>160%</b></li><li>TR <b>160%</b></li><li>EXP/รอบ 1200</li></ul></figcaption></figure>
+      <figure><img src="https://trimage.rhaon.co.kr/tr-admin/editor/notice/update/6ZvXyzIl55OJW4dgcBgQVG.png" alt="ชุด Hatter Noir หญิง" loading="lazy">
+        <figcaption><b>ชุด Hatter Noir (หญิง)</b> — Unique<br>※ เฉพาะ <b>ยอนโอ / บาดา / ยูกิ / คุโระ / ลูซี่</b><br>โบนัสเซ็ตครบ 6 ชิ้น:<ul class="st"><li>กลิ่นหอม 130%</li><li>EXP <b>160%</b></li><li>TR <b>160%</b></li><li>EXP/รอบ 1200</li></ul></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BIRTHDAY ================= -->
+<section id="birthday">
+  <div class="sec-head">
+    <div class="sec-num">12</div>
+    <div><h2>อีเวนต์วันเกิดตัวละคร<span class="ko">생일 이벤트</span></h2></div>
+  </div>
+
+  <div class="card">
+    <p>หลังปิดปรับปรุง NPC ตัวละครที่มีวันเกิดในเดือนกันยายน — <b>อาเบล (아벨)</b> และ <b>มากิ (마키)</b> — จะปรากฏในสวนสาธารณะ ทำเควสต์กับพวกเขาเพื่อรับไอเทมวันเกิดเฉพาะตัวละคร</p>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>NPC</th><th>ชื่อเควสต์</th><th>รางวัล</th><th>รางวัลร่วม</th><th>ช่วงเวลา</th></tr></thead>
+        <tbody>
+          <tr><td>อาเบล</td><td>สุขสันต์วันเกิดอาเบล!</td><td>คูปองอวยพรวันเกิดอาเบล ×2</td><td rowspan="2">TR/EXP +1,000</td><td rowspan="2">09.02 หลังปิดปรับปรุง → 10.07 ก่อนปิดปรับปรุง</td></tr>
+          <tr><td>มากิ</td><td>สุขสันต์วันเกิดมากิ!</td><td>คูปองอวยพรวันเกิดมากิ ×2</td></tr>
+          <tr><td>อาเบล</td><td>17 กันยายน, Abel Rainwolf</td><td>คูปองเลนส์อาเบล 1 วัน</td><td>TR/EXP +1,000</td><td>09.17 00:00 → 09.18 00:00</td></tr>
+          <tr><td>มากิ</td><td>25 กันยายน, มากิ</td><td>คูปองเลนส์มากิ 1 วัน</td><td>TR/EXP +1,000</td><td>09.25 00:00 → 09.26 00:00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>ร้านแลกเปลี่ยน (คลิกขวา)</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>สิ่งที่ได้รับ</th><th>ใช้แลก</th></tr></thead>
+        <tbody>
+          <tr><td>ป้ายชื่ออาเบล (ถาวร) / ภาพวาดอาเบล (ถาวร) / ไม้เท้าเทพเพชร ×500</td><td>คูปองอวยพรวันเกิดอาเบล ×1</td></tr>
+          <tr><td>ป้ายชื่อมากิ (ถาวร) / เซร่า (ถาวร) / ไม้เท้าเทพเพชร ×500</td><td>คูปองอวยพรวันเกิดมากิ ×1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= END / CHANGE ================= -->
+<section id="ending">
+  <div class="sec-head">
+    <div class="sec-num">13</div>
+    <div><h2>สิ้นสุดและเปลี่ยนแปลง<span class="ko">종료 및 변경</span></h2></div>
+  </div>
+  <div class="card">
+    <ul>
+      <li><span class="pill p-end">สิ้นสุด</span> <b>อีเวนต์วันเกิดเดือนสิงหาคม</b> — ลบเควสต์ที่เกี่ยวข้องออก</li>
+      <li><span class="pill p-end">สิ้นสุด</span> <b>การขายกล่อง Aqua Ocean</b> ในร้านค้า</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= REWARD ================= -->
+<section id="reward">
+  <div class="sec-head">
+    <div class="sec-num">14</div>
+    <div><h2>ของชดเชยและของแจก<span class="ko">보상 지급</span></h2></div>
+  </div>
+
+  <div class="card">
+    <h3>ชดเชยกรณียกเลิกไลฟ์สดพูดคุยครบรอบ 21 ปี <span class="pill p-brand">ชุดใหญ่</span></h3>
+    <div class="tw t-sm fig-sm">
+      <table>
+        <thead><tr><th>ไอเทมชดเชย</th></tr></thead>
+        <tbody>
+          <tr><td>กระดาษคำอธิษฐาน 21st ×1</td></tr>
+          <tr><td>ถุงประกายเงิน ×1</td></tr>
+          <tr><td>กล่อง Wonderland ×5</td></tr>
+          <tr><td>กล่องปาร์ตี้ 21st ×20</td></tr>
+          <tr><td>ถุงคริสตัล 21st ×1</td></tr>
+          <tr><td>ชิ้นเค้ก 21st ×100</td></tr>
+          <tr><td>เหรียญที่ระลึก 21st ×2,000</td></tr>
+          <tr><td>ถุงเหรียญพริซมา (พิเศษ) ×5</td></tr>
+          <tr><td>อัญมณีหัวใจที่ถูกเลือก ×500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dev">
+      <span class="dev-t">★ คอมเมนต์จากทีมพัฒนา ★</span>
+      ไลฟ์สดพูดคุยที่จะจัดพร้อมกับอัปเดตครบรอบ 21 ปีถูกยกเลิกโดยไม่อาจหลีกเลี่ยงได้ ต้องขออภัยผู้เล่นทุกท่านที่รอคอย<br>
+      ของรางวัลที่ตั้งใจจะประกาศผ่านไลฟ์จะ<b>แจกทั้งหมดผ่านกล่องจดหมายปีเอโร่</b> และไลฟ์ครั้งถัดไปกำลังเตรียมการอยู่ จะได้พบกันภายในเดือนกันยายนนี้แน่นอน!
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ชดเชยอื่น ๆ</h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>กรณี</th><th>ผู้มีสิทธิ์</th><th>ของชดเชย</th></tr></thead>
+        <tbody>
+          <tr><td>ข้อผิดพลาดเควสต์กิลด์</td><td>ผู้ที่เข้าเกมวันที่ 2026.08.19</td><td>หินแห่งความสามัคคี ×3</td></tr>
+          <tr><td>เซิร์ฟเวอร์ขัดข้อง</td><td>ผู้ที่มีประวัติเข้าเกม 2026.08.21 เวลา 09:40 – 10:10</td><td>แพ็กคันเบ็ด TR 30 นาที ×2<br>หัวใจจริงใจ 1000% ×5</td></tr>
+          <tr><td>ข้อผิดพลาดตั๋ว Home Running</td><td>ผู้ที่ได้รับชดเชยไม่ครบตอนปิดปรับปรุง 2026.08.19</td><td>แพ็กตั๋ว Home Running 1 ชั่วโมง (ส่วนที่ตกหล่น)</td></tr>
+          <tr><td>เพิ่มไอเทมให้ผู้ซื้อ [แพ็ก Shugo Chara Farm]</td><td>ผู้ที่ซื้อแพ็กและผู้ที่ได้รับเป็นของขวัญ</td><td>ผนังห้องอามุ ×2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      ※ ไอเทมที่เก็บอยู่ในกล่องเก็บชั่วคราว เมื่อรับหลังปิดปรับปรุงจะได้องค์ประกอบแบบใหม่<br>
+      ※ หลังปิดปรับปรุงวันที่ 2 กันยายน หากซื้อแพ็ก Shugo Chara Farm องค์ประกอบ “ผนังห้องอามุ” จะเปลี่ยนเป็น <b>3 ชิ้น</b>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ETC ================= -->
+<section id="etc">
+  <div class="sec-head">
+    <div class="sec-num">15</div>
+    <div><h2>อัปเดตอื่น ๆ<span class="ko">기타 업데이트</span></h2></div>
+  </div>
+
+  <div class="card">
+    <h3>TalesRunner Day เดือนกันยายน <span class="pill p-time">02 – 08 ก.ย. 23:59</span></h3>
+    <p style="font-size:14px;color:var(--ink-3)">รางวัลทั้งหมด <b>วันละ 1 ครั้ง · สุ่ม 1 แบบ</b> จากรายการในแต่ละภารกิจ</p>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ภารกิจ</th><th>รางวัล (สุ่ม 1 อย่าง)</th></tr></thead>
+        <tbody>
+          <tr><td>เช็คอินให้ได้! ออนไลน์ครบ 30 นาที</td><td>คูปองพริซมา 300% / 200% / 150% (30 นาที) ×1</td></tr>
+          <tr><td>เช็คอินให้ได้! ออนไลน์ครบ 60 นาที</td><td>ถุงกุญแจล็อกเกอร์ II ×5 / ×4 / ×3 / ×2 / ×1</td></tr>
+          <tr><td>เล่นช่อง Magical Prisma 1 ครั้ง</td><td>หัวใจจริงใจ 1000% ×5 / ×4 / ×3 / ×2 / ×1</td></tr>
+          <tr><td>เล่นช่อง Magical Prisma 3 ครั้ง</td><td>กุญแจพริซมา ×10 / ×5 / ×3 / ×2 / ×1</td></tr>
+          <tr><td>เล่นช่อง Magical Prisma 5 ครั้ง</td><td>เหรียญพริซมา ×100 / ×50 / ×30 / ×20 / ×10</td></tr>
+          <tr><td>เล่นช่อง Magical Prisma 10 ครั้ง</td><td>เหรียญที่ระลึก 21st ×50 / ×40 / ×30 / ×20 / ×10</td></tr>
+          <tr><td>ตกปลาได้ 5 ตัว</td><td>โพชั่นตกปลาอัตโนมัติพริซมา ×10 / ×7 / ×5 / ×3 / ×1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Select Shop — [อีเวนต์] รวบรวมวัตถุดิบการ์ด <span class="pill p-time">02 – 16 ก.ย.</span></h3>
+    <div class="kv">
+      <dt>วัตถุดิบที่ใช้</dt><dd>การ์ด (카드)</dd>
+      <dt>จำกัด</dt><dd>วันละ 10 ครั้ง</dd>
+    </div>
+    <div style="font-size:14.2px"><b>ไอเทมที่ได้รับ:</b><ul class="st"><li>โพชั่นตกปลาอัตโนมัติพริซมา ×1</li><li>โพชั่นฟองของทีที (30 นาที) ×1</li><li>โพชั่นความโกรธของทีที (30 นาที) ×1</li><li>เหรียญที่ระลึก 21st ×50/×100</li><li>เหรียญพริซมา ×3/×5</li><li>Zizimon Token ×1</li><li>กุญแจพริซมา ×1</li><li>กล่องพริซมา ×1</li><li>Prisming Cubic ×1</li><li>ไม้เท้าโปรเฟสเซอร์ ×1</li><li>เขาแห่งความมืดชิ้นเล็ก ×1</li><li>Anisporum ×1</li><li>คริสตัลเวท Facet ×1</li><li>เหรียญแคปซูลพริซมา ครั้งที่ 1–4 ×1</li><li>ถุงแคปซูลพริซมา ครั้งที่ 1–4 ×1</li><li>กล่องแปลงร่างพริซมิ่ง ×1</li><li>Wonderland Token ×1</li><li>กล่อง Wonderland ×1</li><li>กล่องปาร์ตี้ 21st ×1</li><li>ถุงกุญแจล็อกเกอร์ / เปล่งประกาย / หรูหรา / ระดับตำนาน II ×1</li><li>หัวใจจริงใจ 1000% ×1</li><li>ถุงคริสตัล 21st ×1</li><li>แยมหัวใจพริซมิ่ง ×1</li><li>Prisming Shard ×1</li><li>หนังสือเวทอีฟนิ่งเซราฟิม ×1</li></ul></div>
+  </div>
+
+  <div class="card">
+    <h3>ร้านแลก Master Coin — แท็บ [อีเวนต์] <span class="pill p-time">02 – 16 ก.ย.</span></h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ไอเทมที่ได้รับ</th><th class="num">Master Coin</th><th class="c">รีเซ็ตรายวัน</th><th class="c">จำกัด/คน</th></tr></thead>
+        <tbody>
+          <tr><td>ถุงคริสตัล 21st ×1</td><td class="num">50</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td><b>ชิ้นส่วนประกายเงิน ×5</b></td><td class="num">20</td><td class="c">✕</td><td class="c">3</td></tr>
+          <tr><td>กล่องปาร์ตี้ 21st ×1</td><td class="num">10</td><td class="c">✕</td><td class="c">5</td></tr>
+          <tr><td>เหรียญที่ระลึก 21st ×50</td><td class="num">10</td><td class="c">✕</td><td class="c">5</td></tr>
+          <tr><td>กุญแจอีฟนิ่งเซราฟิม ×1</td><td class="num">250</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>Prisma Special Compact ×1</td><td class="num">50</td><td class="c">✕</td><td class="c">2</td></tr>
+          <tr><td>หนังสือเวทเซราฟิมที่ถูกผนึก ×1</td><td class="num">50</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>เข็มทิศพิเศษ I / II / III / IV ×1</td><td class="num">5</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>Magical Sign ×1</td><td class="num">25</td><td class="c">✕</td><td class="c">1</td></tr>
+          <tr><td>วาจาเสียดแทงวิญญาณ ×1</td><td class="num">3</td><td class="c">✕</td><td class="c">5</td></tr>
+          <tr><td>Pure Therapy ×5</td><td class="num">3</td><td class="c">✕</td><td class="c">5</td></tr>
+          <tr><td>Prism Star ×5</td><td class="num">3</td><td class="c">✕</td><td class="c">5</td></tr>
+          <tr><td>หัวใจจริงใจ 1000% ×1</td><td class="num">15</td><td class="c">✕</td><td class="c">5</td></tr>
+          <tr><td>Prisming Shard ×1</td><td class="num">12</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>กล่องแปลงร่างพริซมิ่ง ×1</td><td class="num">10</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>กล่องพริซมา ×1</td><td class="num">5</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>โพชั่นตกปลาอัตโนมัติพริซมา ×5</td><td class="num">10</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>กุญแจพริซมา ×1</td><td class="num">4</td><td class="c">✕</td><td class="c">10</td></tr>
+          <tr><td>คูปองเป่าลม ×1</td><td class="num">5</td><td class="c">✕</td><td class="c">3</td></tr>
+          <tr><td>คันเบ็ด TR 1 ชั่วโมง</td><td class="num">15</td><td class="c">✕</td><td class="c">3</td></tr>
+          <tr><td>ไม้เท้าเทพเพชร ×100</td><td class="num">5</td><td class="c">✕</td><td class="c">3</td></tr>
+          <tr><td>คูปองกระดานฝันร้าย III ×3</td><td class="num">10</td><td class="c">✕</td><td class="c">3</td></tr>
+          <tr><td>คูปองรีเซ็ตกระดานฝันร้าย III ×1</td><td class="num">10</td><td class="c">✕</td><td class="c">3</td></tr>
+          <tr><td>Anubis Crystal ×1</td><td class="num">5</td><td class="c">✕</td><td class="c">3</td></tr>
+          <tr><td>ถุงพลัง 7 มหาปฐม ×1</td><td class="num">30</td><td class="c">✕</td><td class="c">1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>New Hot Time — ตารางเวลาเดือนกันยายน</h3>
+    <div class="tw t-sm fig-sm">
+      <table>
+        <thead><tr><th>เริ่ม</th><th>สิ้นสุด</th></tr></thead>
+        <tbody>
+          <tr><td>2026-09-06 00:05</td><td>2026-09-07 00:00</td></tr>
+          <tr><td>2026-09-13 00:05</td><td>2026-09-14 00:00</td></tr>
+          <tr><td>2026-09-20 00:05</td><td>2026-09-21 00:00</td></tr>
+          <tr><td>2026-09-25 00:05</td><td>2026-09-26 00:00</td></tr>
+          <tr><td>2026-09-27 00:05</td><td>2026-09-28 00:00</td></tr>
+          <tr><td>2026-10-04 00:05</td><td>2026-10-05 00:00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ฉายาใหม่ทั้งหมดในอัปเดตนี้</h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ชื่อฉายา</th><th class="c">ระดับ</th><th>ความสามารถ</th></tr></thead>
+        <tbody>
+          <tr><td>สแตมป์บิงโกของลูซี่!</td><td class="c"><span class="pill p-brand">Legendary</span></td><td>—</td></tr>
+          <tr><td>TalesRunner! ครบรอบ 21 ปี!</td><td class="c"><span class="pill p-time">Unique</span></td><td>—</td></tr>
+          <tr><td>ครีมปาร์ตี้ 21 ปี</td><td class="c"><span class="pill p-time">Unique</span></td><td>—</td></tr>
+          <tr><td>ร่วมฉลอง 21 ปี</td><td class="c"><span class="pill p-new">Rare</span></td><td>—</td></tr>
+          <tr><td>ซีโครเนียม (★x5) มือใหม่</td><td class="c"><span class="pill p-new">Rare</span></td><td>ความสามารถต่อสู้</td></tr>
+          <tr><td>ซีโครเนียม (★x5) มือกลาง</td><td class="c"><span class="pill p-new">Rare</span></td><td>โจมตีจุดอ่อน</td></tr>
+          <tr><td>ซีโครเนียม (★x5) มือเก๋า</td><td class="c"><span class="pill p-new">Rare</span></td><td>เวทชำนาญ 4</td></tr>
+          <tr><td>พริซมาผู้ส่องสว่างความมืด</td><td class="c"><span class="pill p-new">Rare</span></td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ของขวัญรายวัน VIP Lounge <span class="pill p-time">ก.ย. ครั้งที่ 1 → ก.ย. ครั้งที่ 2</span></h3>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="c">ระดับ</th><th>ของขวัญรายวัน</th></tr></thead>
+        <tbody>
+          <tr><td class="c">🟢 Green</td><td><ul class="st"><li>โพชั่น EXP 200% (1 ชม.) ×2</li><li>โพชั่น TR 100% (1 ชม.) ×2</li></ul></td></tr>
+          <tr><td class="c">🔴 Red</td><td><ul class="st"><li>โพชั่น EXP 400% (1 ชม.) ×2</li><li>โพชั่น TR 200% (1 ชม.) ×2</li><li>EXP Random Box ×1</li></ul></td></tr>
+          <tr><td class="c">🟣 Purple</td><td><ul class="st"><li>โพชั่น EXP 700% ×1</li><li>โพชั่น EXP 500% ×1</li><li>โพชั่น TR 300% ×1</li><li>Bronze Running Shoes ×2</li></ul></td></tr>
+          <tr><td class="c">🔵 Dark Blue</td><td><ul class="st"><li>ห่อของที่ระลึก 21st ×3</li><li>คูปองกระดาน VIP ฝันร้าย II ×3</li><li>โพชั่น EXP 700% ×2</li><li>โพชั่น TR 300% ×2</li><li>Silver Running Shoes ×2</li></ul></td></tr>
+          <tr><td class="c">⚫ Black</td><td><ul class="st"><li>ห่อของที่ระลึก 21st ×10</li><li>คูปองกระดาน VIP ฝันร้าย II ×6</li><li>โพชั่น EXP 900% ×2</li><li>โพชั่น TR 300% ×2</li><li>Gold Running Shoes ×2</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>รางวัลเปลี่ยนจาก “ไม่เปิดเผย → เปิดเผย” ของเดือนกันยายน 2026</h4>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th class="c">ระดับ</th><th>รางวัล</th></tr></thead>
+        <tbody>
+          <tr><td class="c">🔴 Red</td><td>เหรียญที่ระลึก 21st ×30</td></tr>
+          <tr><td class="c">🟣 Purple</td><td>เหรียญที่ระลึก 21st ×100</td></tr>
+          <tr><td class="c">🔵 Dark Blue</td><td><ul class="st"><li>กระดาษคำอธิษฐาน 21st ×1</li><li>กล่อง Wonderland ×3</li></ul></td></tr>
+          <tr><td class="c">⚫ Black</td><td><ul class="st"><li>กระดาษคำอธิษฐาน 21st ×2</li><li>กล่อง Wonderland ×10</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ภารกิจ Tales Book</h3>
+    <p><b>ปรับรางวัลภารกิจพิเศษ (스페셜 미션):</b></p>
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th>ภารกิจ</th><th>ก่อนเปลี่ยน</th><th>หลังเปลี่ยน</th></tr></thead>
+        <tbody>
+          <tr><td>เล่นแมปใดก็ได้ 5 ครั้ง</td><td>EXP ตามเลเวล / รางวัลภารกิจปกติใหม่ / เครื่องหมายจบภารกิจ II ×1 / แสงแห่งหัวใจ ×5</td><td>EXP ตามเลเวล / รางวัลภารกิจปกติใหม่ / <b>กล่องเทศกาล 21st ×1</b> / แสงแห่งหัวใจ ×5</td></tr>
+          <tr><td>เล่นแมปใดก็ได้ 6 ครั้ง</td><td>เครื่องหมายจบภารกิจ II ×3</td><td>เครื่องหมายจบภารกิจ II ×4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>🎁 ของในกล่องเทศกาล 21st (21st 축제 상자)</h4>
+    <div class="tw t-sm fig-sm">
+      <table>
+        <thead><tr><th>ไอเทม</th></tr></thead>
+        <tbody>
+          <tr><td>ชิ้นเค้ก 21st ×50</td></tr>
+          <tr><td>ตั๋วสแตมป์บิงโก 21st ×24</td></tr>
+          <tr><td>กุญแจตู้เซฟทองคำ 21st ×30</td></tr>
+          <tr><td>เหรียญที่ระลึก 21st ×360</td></tr>
+          <tr><td>โพชั่นตลาด 21 ปี (กลาง) ×5</td></tr>
+          <tr><td>บัตรสุ่มเลขนำโชค ×100</td></tr>
+          <tr><td>บัตรลดเวลา 1 ชั่วโมง ×5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip">💡 กล่องเทศกาล 21st คือ<b>แหล่งรวมไอเทมอีเวนต์หลักทั้งหมด</b> — ควรทำภารกิจ Tales Book “เล่นแมปใดก็ได้ 5 ครั้ง” ทุกวัน</div>
+  </div>
+
+  <div class="card">
+    <h3>อื่น ๆ</h3>
+    <ul>
+      <li>อัปเดต <b>คอลเลกชันใหม่</b></li>
+      <li>อัปเดต <b>สินค้าใหม่ในร้านค้า</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= BUGFIX ================= -->
+<section id="bugfix">
+  <div class="sec-head">
+    <div class="sec-num">16</div>
+    <div><h2>การแก้ไขบั๊ก<span class="ko">버그 수정</span></h2></div>
+  </div>
+
+  <div class="card">
+    <div class="tw t-sm">
+      <table>
+        <thead><tr><th style="width:150px">หมวด</th><th>รายละเอียดที่แก้ไข</th></tr></thead>
+        <tbody>
+          <tr><td>สู้เถอะ! กิกะซีโครเนียม</td><td>แก้ปัญหาที่บางครั้งใช้ Harmonycure หลังเข้าไปข้างในแล้ว Game Over</td></tr>
+          <tr><td>สู้เถอะ! กิกะซีโครเนียม</td><td>แก้ปัญหาที่บางครั้งเมื่อ Zizirex ลงมาแล้วโดนโจมตี สถานะกลิ้งค้างอยู่</td></tr>
+          <tr><td>Magic! Prisma</td><td>แก้ปัญหาที่บางครั้งเวทถูกบันทึกผิดปกติ</td></tr>
+          <tr><td>กิลด์</td><td>แก้ปัญหาที่เควสต์กิลด์ที่ลงทะเบียนเมื่อวานไม่แสดงในวันถัดไป</td></tr>
+          <tr><td>แมป</td><td>แก้ปัญหาที่บางจุดใน “น้ำพุนางฟ้า” ท่าสไลด์ไม่ยอมหลุด</td></tr>
+          <tr><td>ไอเทม</td><td>แก้ปัญหาเอฟเฟกต์ Blue Trophy Wing ถูกใช้ผิด</td></tr>
+          <tr><td>สงครามยึดครอง</td><td>แก้ข้อความแจ้งเวลาสรุปผลสงครามยึดครองกิลด์</td></tr>
+          <tr><td>ตัวละคร</td><td>แก้ปัญหาที่ บาดา และ รีนา ไม่ขยับเมื่อทำท่า V-Pose</td></tr>
+          <tr><td>ตัวละคร</td><td>แก้ปัญหาที่รองเท้า Summer Sports ของ ยอนโอ ย้อมสีไม่ได้</td></tr>
+          <tr><td>ตัวละคร</td><td>แก้ปัญหาที่ตัวละครชายบางตัวใส่ Snow Bear Shoes แล้วน่องกลายเป็นโปร่งใส</td></tr>
+          <tr><td>วิ่งเดี่ยว</td><td>แก้ปัญหาที่บันทึกตำแหน่งแล้วเข้าเส้นชัยเร็วเกินไปจนถูกระบบมองว่าใช้โปรแกรมผิดกฎหมาย</td></tr>
+          <tr><td>PC Bang</td><td>แก้ปัญหาที่หน้าอินโทรตอนเปิดเกมยังแสดงสิทธิประโยชน์ PC Bang แบบเก่า</td></tr>
+          <tr><td>สวนสาธารณะ</td><td>แก้ปัญหาที่ NPC Elims Smile และ มิงมิง แสดงบอลลูนข้อความอีเวนต์วันเกิด</td></tr>
+          <tr><td>Tales Book</td><td>แก้ปัญหาที่บัฟภารกิจพิเศษกำลังทำงานอยู่แต่แสดงเป็นสถานะปิด</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin-bottom:14px"><a href="../index.html" style="font-weight:500">← กลับหน้ารวมอัปเดต TalesRunner Korea</a></p>
+    <p>สรุป &amp; แปลไทยจากประกาศทางการ <a href="https://tr.rhaon.co.kr/news/updates" target="_blank" rel="noreferrer">tr.rhaon.co.kr</a> · รูปภาพทั้งหมดเป็นลิขสิทธิ์ของ RHAON Entertainment</p>
+    <p>※ ไอเทมที่อัปเดตอาจถูกนำกลับมาขายซ้ำในรูปแบบเดิมหรือใกล้เคียงในอนาคต · เนื้อหาอัปเดตอาจเปลี่ยนแปลงได้ตามสถานการณ์ภายใน</p>
+  </div>
+</footer>
+
+</body>
+</html>
