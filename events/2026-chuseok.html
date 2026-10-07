@@ -21,6 +21,8 @@
     .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:600}.brand-mark{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;color:#fff;background:linear-gradient(135deg,var(--brand),#ec4899)}
     .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:14px;font-weight:400}.back:hover{text-decoration:underline}.back:focus-visible,.copy:focus-visible{outline:3px solid #f6b267;outline-offset:3px}
     .hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(125deg,#4c1d95 0%,#7c3aed 58%,#df6414 120%);padding:58px 0 62px}
+    .jump{position:sticky;top:10px;z-index:20;display:flex;gap:7px;overflow-x:auto;margin:24px auto 0;padding:8px;width:max-content;max-width:calc(100% - 32px);border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.94);box-shadow:var(--shadow);backdrop-filter:blur(12px);scrollbar-width:thin}
+    .jump a{flex:none;padding:7px 13px;border-radius:999px;color:var(--ink);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap}.jump a:hover{background:var(--brand-soft);color:var(--brand)}.jump a:focus-visible{outline:3px solid #f6b267;outline-offset:2px}
     .hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(520px 260px at 85% 10%,rgba(255,207,138,.28),transparent 70%)}
     .hero .wrap{position:relative;z-index:1}.eyebrow{margin:0 0 10px;font-size:13px;letter-spacing:.08em;font-weight:500;opacity:.88}.hero h1{max-width:820px;margin:0;font-size:clamp(31px,5vw,52px);line-height:1.22;letter-spacing:-.025em}.hero p{max-width:680px;margin:18px 0 0;font-size:17px;opacity:.88}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.meta span{padding:6px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(0,0,0,.13);font-size:13px}
     main{padding:40px 0 80px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
@@ -30,7 +32,7 @@
     .code{font-family:"Noto Sans KR",sans-serif;font-weight:700;color:#342e42;white-space:nowrap}.date{font-variant-numeric:tabular-nums;white-space:nowrap}.reward{color:var(--muted);font-size:14px}.copy{min-width:96px;cursor:pointer;border:1px solid #efb27f;background:var(--event-soft);color:#a94408;border-radius:9px;padding:7px 12px;font-weight:500;transition:.16s}.copy:hover{background:#ffe4c2;border-color:var(--event)}.copy:active{transform:translateY(1px)}.copy[data-copied="true"]{background:#e9f8f0;border-color:#87cdaa;color:var(--ok)}
     .note{margin:14px 0 0;color:var(--muted);font-size:13px}.visual{padding:clamp(10px,2vw,18px)}.visual-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:8px 12px 16px}.visual h2{font-size:20px;margin:0}.original-link{font-size:13px;font-weight:500;white-space:nowrap}.image-native{display:block;width:min(1152px,100%);margin-inline:auto}.infographic{display:block;width:1152px;max-width:100%;height:auto;border-radius:12px;background:#ffbc83;image-rendering:auto}
     footer{padding:28px 0 42px;text-align:center;color:var(--muted);font-size:13px}.toast{position:fixed;left:50%;bottom:22px;z-index:10;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#252130;color:#fff;border-radius:999px;padding:10px 17px;box-shadow:0 10px 30px rgba(0,0,0,.22);transition:.2s}.toast.show{transform:translate(-50%,0);opacity:1}
-    @media(max-width:640px){.sitebar .wrap{min-height:58px}.hero{padding:42px 0 46px}.hero p{font-size:15px}.section-head{display:block}.coupon-section{border-radius:16px}.visual{border-radius:16px}.back span{display:none}}
+    @media(max-width:640px){.sitebar .wrap{min-height:58px}.hero{padding:42px 0 46px}.hero p{font-size:15px}.jump{border-radius:16px;justify-content:flex-start}.section-head{display:block}.coupon-section{border-radius:16px}.visual{border-radius:16px}.back span{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.copy,.toast{transition:none}}
     @media(forced-colors:active){.copy{border:1px solid ButtonText}.copy:focus-visible{outline:2px solid Highlight}}
   </style>
@@ -50,8 +52,9 @@
       <div class="meta"><span>16–27 กันยายน 2026</span><span>รหัสคูปอง 9 รายการ</span></div>
     </div>
   </section>
+  <nav class="jump" aria-label="สารบัญกิจกรรม"><a href="#coupons">คูปองกิจกรรม</a><a href="#details">รายละเอียดกิจกรรม</a></nav>
   <main class="wrap">
-    <section class="panel coupon-section" aria-labelledby="coupon-title">
+    <section class="panel coupon-section" id="coupons" aria-labelledby="coupon-title">
       <div class="section-head"><div><p class="section-kicker">COUPON QUICK COPY</p><h2 id="coupon-title">รหัสคูปองกิจกรรม</h2><p>กดปุ่มเพื่อคัดลอกรหัสภาษาเกาหลีไปใช้ในเกมได้ทันที</p></div></div>
       <div class="table-shell">
         <table>
@@ -71,7 +74,7 @@
       </div>
       <p class="note">เวลาทั้งหมดอ้างอิงเวลาเกาหลี (KST) และไอเทมมีอายุเก็บรักษา 2 สัปดาห์นับจากวันที่ได้รับ</p>
     </section>
-    <section class="panel visual" aria-labelledby="detail-title">
+    <section class="panel visual" id="details" aria-labelledby="detail-title">
       <div class="visual-head"><h2 id="detail-title">รายละเอียดกิจกรรมฉบับภาษาไทย</h2><a class="original-link" href="../0B2FoVEtV24k9Bn5ZzL0M0-th-v2.png" target="_blank" rel="noopener">เปิดภาพเต็ม 1152 × 9603 px ↗</a></div>
       <a class="image-native" href="../0B2FoVEtV24k9Bn5ZzL0M0-th-v2.png" target="_blank" rel="noopener" aria-label="เปิดอินโฟกราฟิกขนาดเต็มในแท็บใหม่">
         <img class="infographic" src="../0B2FoVEtV24k9Bn5ZzL0M0-th-v2.png" width="1152" height="9603" alt="อินโฟกราฟิกรายละเอียดกิจกรรมเทศกาลชูซอกปี 2026 ของ TalesRunner ฉบับภาษาไทย" loading="eager" decoding="sync">
